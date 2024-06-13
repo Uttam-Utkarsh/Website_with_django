@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: aliceblue;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.title{
+    width: 25vw;
+    height: 3vw;
+    position:absolute;
+    /* background-color: beige; */
+    color: aliceblue;
+    top: 5vh;
+}
+
+.title h1{
+    display: flex;
+    justify-content: center;
+}
+
+.col1 {
+    width: 20vw;
+    height: 100vh;
+    /* background-color: rgb(194, 227, 10); */
+}
+
+.col2 {
+    width: 60vw;
+    height: 60vh;
+    align-items: center;
+    background-image: url("https://media.istockphoto.com/id/1571545324/photo/town-squre-in-kowloon-hong-kong.jpg?s=2048x2048&w=is&k=20&c=6fJVS1o4VbGZruMueup66c0NgFr9cW-9f53Za7AjW2o=");
+    background-position: center;
+    background-size: cover;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 1px solid white;
+    /* background-color: rgb(10, 227, 194); */
+}
+
+.col3 {
+    width: 20vw;
+    height: 100vh;
+    /* background-color: rgb(227, 10, 111); */
+}
+
+.col1,
+.col3 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+i:hover{
+    cursor: pointer;
+    scale: 2;
+    transition: ease;
+}

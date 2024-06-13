@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- for login -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- swiper js -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" </head>
+
+<body>
+    <div class="main">
+
+        <div class="page1">
+            <div class="container">
+                <div class="top">
+                    <div class="row1 for-hover">
+                        <div class="part1 contacts"><a href="mailto:uutkarsh97@gmail.com"><i
+                                    class="fa-solid fa-envelope"></i>:demo@gmail.com</a></div>
+
+                        <div class="part-small "><a href="mailto:uutkarsh97@gmail.com"><i
+                                    class="fa-solid fa-envelope"></i></a>
+                        </div>
+
+                        <div class="part2 contacts"><a href="tel:9876543210"><i
+                                    class="fa-solid fa-phone"></i>:+919876543210</a>
+                        </div>
+
+                        <div class="part-small"><a href="tel:9876543210"><i class="fa-solid fa-phone"></i></a></div>
+
+                        <div class="part3">
+                            <div class="part1-div"><a href="https://facebook.com"><i
+                                        class="fa-brands fa-facebook"></i></a></div>
+                            <div class="part1-div"><a href="https://instagram.com"><i
+                                        class="fa-brands fa-square-instagram"></i></a></div>
+                            <div class="part1-div"><a href="https://www.x.com"><i
+                                        class="fa-brands fa-twitter"></i></a></a></div>
+                        </div>
+                    </div>
+                    <div class="row2 for-hover">
+                        <div class="col1">
+                            <img src="../static/image/img2.jpg" alt="">
+
+                        </div>
+                        <div class="col2">
+                            <div class="mod"><a href="{% url 'index' %}">Home</a></div>
+                            <div class="mod"><a href="./About us/index.html">About us</a></div>
+                            <div class="mod"><a href="./AdmissionForm/index.html">Admission</a></div>
+                            <div class="mod"><a href="./News/index.html">News</a></div>
+                            <div class="mod"><a href="./Gallery/index.html">Gallery</a></div>
+                            <div class="mod"><a href="./contactUs/index.html">Contact Us</a></div>
+
+
+
+
+
+
+                        </div>
+                        <div class="col3">
+                            <a href="#"><i class="fa-solid fa-user profile"></i></a>
+                            <i id="menu" class=" fa-solid fa-bars profile"></i>
+
+                        </div>
+
+                    </div>
+                    <div data-scroll data-scroll-direction="horizontal " data-scroll-speed="3" class="heading">
+                        <div class="elem">
+                            <h1>learn from the coolest <br>education platfrom <br> of the india</h1>
+                            <p>“The function of education is to teach one to think intensively and to think critically.
+                                <br> Intelligence plus character –– that is the goal of true education.” – Dr. Martin
+                                Luther King Jr.
+                            </p>
+                            <button>explore now</button>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="back">
+                    <img src="https://images.unsplash.com/20/cambridge.JPG?q=80&w=2647&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <img src="https://images.unsplash.com/photo-1714756123393-929709970fdb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <img src="https://images.unsplash.com/photo-1715257742105-b4f626ce3c2d?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                    <img src="https://images.unsplash.com/photo-1714715362537-4aa538a6f0ab?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwxMXx8fGVufDB8fHx8fA%3D%3D"
+                        alt="">
+                </div>
+            </div>
+            <div class="hamburger-menu">
+                <div class="background">
+                    <div class="shape"></div>
+                    <div class="shape"></div>
+                </div>
+                <form>
+                    <h3>Login/<a id="signup" href="">Signup</a></h3>
+
+
+                    <label for="username">Username</label>
+                    <input type="text" placeholder="Email or Phone" id="username">
+
+                    <label for="password">Password</label>
+                    <input type="password" placeholder="Password" id="password">
+
+                    <button id="loginbutton" type="submit">Log In</button>
+                    <div class="social">
+                        <a href="https://www.google.com">
+                            <div class="go"><i class="fab fa-google"></i> Google</div>
+                        </a>
+                        <a href="https://www.facbook.com">
+                            <div class="fb"><i class="fab fa-facebook"></i> Facebook</div>
+                        </a>
+
+
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+        <div class="page2">
+            <div class="row1">
+                <div class="col1">
+                    <h5>About University</h5>
+                </div>
+                <div class="col2">
+                    <h1>educatiion is not <br> prepration for life; <br> education is life itself </h1>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="col1 image-containerfor-row2"></div>
+                <div class="col2 image-containerfor-row2 box">
+                    <div class="imgdets">
+                        <h1>What does university <br>teach us?</h1>
+                        <p>However, college life teaches you to love you more and give importance to the areas that make
+                            you happy. And the best part among that is following your passions. Rather than sticking to
+                            your comfort zone, the campus life gives the spark to always try something new in life.</p>
+                    </div>
+                    <img src="https://plus.unsplash.com/premium_photo-1681248156422-c01a2c803588?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2xhc3Nyb29tfGVufDB8fDB8fHww"
+                        alt="">
+                </div>
+                <div class="col3 image-containerfor-row2 box">
+                    <div class="imgdets">
+                        <h1>What is the importance of <br>the campus?</h1>
+                        <p>The Importance Of Having A Good School Campus. If schooling is important, so is the school
+                            campus and its surroundings. " School is a building with four walls which has tomorrow
+                            inside," is a frequently quoted one-line saying about schools. That said, any space or place
+                            can be used to impart knowledge.</p>
+                    </div><img
+                        src="https://images.unsplash.com/photo-1577985043696-8bd54d9f093f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FtcHVzfGVufDB8fDB8fHww"
+                        alt="">
+                </div>
+            </div>
+            <div class="row3 ">
+                <div class="col1 image-containerfor-row2 box">
+                    <div class="imgdets">
+                        <h1>Why is it important to have <br>a degree?</h1>
+                        <p>Research suggests that: Graduates enjoy higher quality jobs than non-graduates. Graduates
+                            enjoy better health outcomes, by being less likely to smoke, more likely to exercise, and
+                            less prone to depression.</p>
+                    </div><img
+                        src="https://plus.unsplash.com/premium_photo-1682974403683-591557aa631b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZGVncmVlJTIwaW4lMjBjb2xsZWdlfGVufDB8fDB8fHww"
+                        alt="">
+                </div>
+                <div class="col2 image-containerfor-row2 box">
+                    <div class="imgdets">
+                        <h1>Why is the library important <br>in university?</h1>
+                        <p>Libraries serve as knowledge reservoirs by holding substantial collections of books,
+                            periodicals, research papers, and other academic materials. They give instructors and
+                            students access to a wide range of data that is essential for self-improvement, research,
+                            and coursework.</p>
+                    </div><img
+                        src="https://images.unsplash.com/photo-1544640808-32ca72ac7f37?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNsYXNzcm9vbXxlbnwwfHwwfHx8MA%3D%3D"
+                        alt="">
+                </div>
+                <div class="col3 image-containerfor-row2"></div>
+            </div>
+        </div>
+        <div class="page3">
+            <div class="row1"></div>
+            <div class="row2">
+                <h1>academic programes</h1>
+                <h6>exolor university's 10+ cources across various specialization that <br>provoke intellectual and
+                    intuitive learning among students.</h6>
+            </div>
+            <div class="row3">
+                <h6>/bachelor</h6>
+                <h6>/masters</h6>
+                <h6>/phd</h6>
+            </div>
+            <div class="row4">
+
+                <!-- Swiper -->
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide ">
+                            <!-- <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> -->
+                            <div class="part1">
+                                <h4>School of Humanities <br> and sciences</h4>
+                            </div>
+                            <div class="part2">
+                                <div class="col1">
+                                    <h6>/Bachelor</h6>
+                                </div>
+                                <div class="col2"><i class="fa-solid fa-arrow-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <!-- <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> -->
+                            <div class="part1">
+                                <h4>civil & environmental <br> engineering department</h4>
+                            </div>
+                            <div class="part2">
+                                <div class="col1">
+                                    <h6>/Bachelor</h6>
+                                </div>
+                                <div class="col2"><i class="fa-solid fa-arrow-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <!-- <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> -->
+                            <div class="part1">
+                                <h4>School of Humanities <br> and sciences</h4>
+                            </div>
+                            <div class="part2">
+                                <div class="col1">
+                                    <h6>/Bachelor</h6>
+                                </div>
+                                <div class="col2"><i class="fa-solid fa-arrow-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <!-- <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> -->
+                            <div class="part1">
+                                <h4>School of Humanities <br> and sciences</h4>
+                            </div>
+                            <div class="part2">
+                                <div class="col1">
+                                    <h6>/Bachelor</h6>
+                                </div>
+                                <div class="col2"><i class="fa-solid fa-arrow-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <!-- <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> -->
+                            <div class="part1">
+                                <h4>School of Humanities <br> and sciences</h4>
+                            </div>
+                            <div class="part2">
+                                <div class="col1">
+                                    <h6>/Bachelor</h6>
+                                </div>
+                                <div class="col2"><i class="fa-solid fa-arrow-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <!-- <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> -->
+                            <div class="part1">
+                                <h4>School of Humanities <br> and sciences</h4>
+                            </div>
+                            <div class="part2">
+                                <div class="col1">
+                                    <h6>/Bachelor</h6>
+                                </div>
+                                <div class="col2"><i class="fa-solid fa-arrow-right"></i></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <!-- <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> -->
+                            <div class="part1">
+                                <h4>School of Humanities <br> and sciences</h4>
+                            </div>
+                            <div class="part2">
+                                <div class="col1">
+                                    <h6>/Bachelor</h6>
+                                </div>
+                                <div class="col2"><i class="fa-solid fa-arrow-right"></i></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="page4">
+            <div class="row1">
+                <div class="col1">
+                    <h4>faculty</h4>
+                </div>
+                <div class="col2">
+                    <h1>our skilled faculty <br> helps students in <br> many diciplines</h1>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="col1">
+                    <div class="contain-image">
+                        <img src="https://plus.unsplash.com/premium_photo-1661391644149-4fab855f2815?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8ZW52aXJvbm1lbnQlMjBzY2llbmNlfGVufDB8fDB8fHww"
+                            alt="">
+                    </div>
+                    <div class="image-details">
+                        <div class="part1">
+                            <h6>Bachelor</h6>
+                        </div>
+                        <div class="part2">
+                            <h5>faculty of engineering <br>and <br> technology</h5>
+                        </div>
+                        <div class="part3">
+                            <p>At,present there are five deparments within the faculty: deparments of geography and
+                                enviroment, geology, oceangraphy, disaster science and climate resillience and
+                                meteorology</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="col1 mycol1">
+                    <div class="contain-image">
+                        <img src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29sbGVnZSUyMGNhbXB1c3xlbnwwfHwwfHx8MA%3D%3D"
+                            alt="">
+                    </div>
+                    <div class="image-details">
+                        <div class="part1">
+                            <h6>Bachelor</h6>
+                        </div>
+                        <div class="part2">
+                            <h5>faculty of earth <br> and <br>enviromental science</h5>
+                        </div>
+                        <div class="part3">
+                            <p>At,present there are five deparments <br> within the faculty: deparments of geography and
+                                enviroment, geology, oceangraphy, disaster science and climate resillience and
+                                meteorology</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row3">
+                <div class="allfaculty">
+                    <h4>see all faculty</h4>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
+            </div>
+
+        </div>
+        <div class="page5">
+            <div class="onlycolor"></div>
+
+            <div class="page5div1">
+                <div class="part">
+                    <h2><span class="big"> <span id="num1">00</span>k</span>students</h2>
+                    <h6>At Present,There are 10k+ Students <br> study in our university <br> and All Students are Very
+                        Happy with us!
+                    </h6>
+                </div>
+                <div class="part">
+                    <h2><span class="big" id="num2">000</span> Professors</h2>
+                    <h6>At Present,There are 300+ Professors <br> are avialable to provide best content for the Students
+                        <br> and All Professors are well qulified!
+                    </h6>
+                </div>
+                <div class="part">
+                    <h2><span class="big" id="num3">00</span>Faculty</h2>
+                    <h6>At Present,There are 70+ Faculty <br> are avialable for the Students. Therefore they <br> Choice
+                        there faculty according to their dreem.
+                    </h6>
+                </div>
+            </div>
+            <div class="page5div2">
+                <div class="part1">
+                    <h6 data-scroll data-scroll-direction="horizontal " data-scroll-speed="2">Campus Life</h6>
+                </div>
+                <div class="part2">
+                    <h1 data-scroll data-scroll-direction="horizontal " data-scroll-speed="2">university is the <br>
+                        best time of your <br>life</h1>
+                    <h6>
+                        “You can’t just sit there and wait for people to give you that golden dream. You’ve got to get
+                        out there and make it happen for yourself.” —Diana Ross
+                    </h6>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+        <div class="page6">
+            <div class="row1">
+                <div class="part1">
+                    <h1>research & <br>publication</h1>
+                </div>
+                <div class="part2">
+                    <p>“No research without action, no action without research”</p>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="contain-img">
+                            <img src="https://images.unsplash.com/photo-1605290975464-72d2acef7d4a?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="">
+                        </div>
+                        <div class="textdiv">
+                            <span>How to Beat <br> Anti-Incumbency</span>
+                            <p>A more realistic mathematical model has been developed by Mrinal Ghosh and his
+                                collaborators, one which considers inflation as having a fluctuating value, given by a
+                                stochastic differential equation.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="contain-img">
+                            <img src="https://images.unsplash.com/photo-1578496479914-7ef3b0193be3?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="">
+                        </div>
+                        <div class="textdiv">
+                            <span>Understanding <br>Climate Change</span>
+                            <p>In a new study, Govindasamy Bala—one of India’s most well-known climate scientists—and
+                                his student, Angshuman Modak, addressed the issue of the efficacy of the incident solar
+                                radiation relative to CO2.*</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="contain-img">
+                            <img src="https://images.unsplash.com/photo-1568158535468-8d9d46817c69?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="">
+                        </div>
+                        <div class="textdiv">
+                            <span>Design inspired <br>by nature</span>
+                            <p>a materials engineer who has done pioneering work in the field of crystal structures, and
+                                Debiprosad Roy Mahapatra, an aeronautical engineer who works on engineering mechanics...
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="contain-img">
+                            <img src="https://plus.unsplash.com/premium_photo-1661645223527-bdb11aad9030?q=80&w=2369&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="">
+                        </div>
+                        <div class="textdiv">
+                            <span>nanoengineering is <br>changing our world</span>
+                            <p>studies structures that are so small that they have properties very different from those
+                                in the macro-world. The current focus of his group is to understand the dynamics of
+                                micro and nanoscale mechanical structures, such as beams, plates, membranes etc.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="contain-img">
+                            <img src="https://images.unsplash.com/photo-1598026873048-9f7aedde8169?q=80&w=2371&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="">
+                        </div>
+                        <div class="textdiv">
+                            <span>Visualizing <br>data</span>
+                            <p>Scientific data─such as those arising from imaging devices and computational experiments
+                                in science and engineering disciplines─is increasingly becoming larger in size and
+                                richer in its features.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="contain-img">
+                            <img src="https://images.unsplash.com/photo-1598043596827-fd992a2f137a?q=80&w=2372&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="">
+                        </div>
+                        <div class="textdiv">
+                            <span>Going for <br>Gold</span>
+                            <p>Using advanced microscopy techniques like transmission electron microscopy, N Ravishankar
+                                and his team study nanostructures, especially how they form, grow and attain specific
+                                shapes.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="page7">
+            <div class="onlycolor"></div>
+            <div class="middlerow">
+                <div class="col1">
+                    <div class="writeen">
+                        <h3 id="test">Testimonial</h3>
+                        <h3 id="students">students</h3>
+                        <h3 id="feedback">feedback</h3>
+                    </div>
+                </div>
+                <div class="col2">
+                    <div class="part1">
+                        <div class="owl-carousel owl-theme mycrou">
+                            <div class="item myui">
+                                <div class="myyrow1">
+                                    <div class="part-1">
+                                        <img src="https://images.unsplash.com/photo-1577880216142-8549e9488dad?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="">
+                                    </div>
+                                    <div class="part2">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <h5>Uttam Utkarsh</h5>
+                                        <h6>Student</h6>
+                                    </div>
+
+                                </div>
+                                <div class="row2">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus porro nostrum
+                                        placeat laudantium corrupti ullam.</p>
+                                </div>
+                            </div>
+                            <div class="item myui">
+                                <div class="myyrow1">
+                                    <div class="part-1">
+                                        <img src="https://plus.unsplash.com/premium_photo-1693258698597-1b2b1bf943cc?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="">
+                                    </div>
+                                    <div class="part2">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <h5>Uttam Utkarsh</h5>
+                                        <h6>Student</h6>
+                                    </div>
+
+                                </div>
+                                <div class="row2">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus porro nostrum
+                                        placeat laudantium corrupti ullam.</p>
+                                </div>
+                            </div>
+                            <div class="item myui">
+                                <div class="myyrow1">
+                                    <div class="part-1">
+                                        <img src="https://plus.unsplash.com/premium_photo-1687485794296-68f0d6e934bb?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="">
+                                    </div>
+                                    <div class="part2">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <h5>Uttam Utkarsh</h5>
+                                        <h6>Student</h6>
+                                    </div>
+
+                                </div>
+                                <div class="row2">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus porro nostrum
+                                        placeat laudantium corrupti ullam.</p>
+                                </div>
+                            </div>
+                            <div class="item myui">
+                                <div class="myyrow1">
+                                    <div class="part-1">
+                                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2561&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="">
+                                    </div>
+                                    <div class="part2">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <h5>Uttam Utkarsh</h5>
+                                        <h6>Student</h6>
+                                    </div>
+
+                                </div>
+                                <div class="row2">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus porro nostrum
+                                        placeat laudantium corrupti ullam.</p>
+                                </div>
+                            </div>
+                            <div class="item myui">
+                                <div class="myyrow1">
+                                    <div class="part-1">
+                                        <img src="https://plus.unsplash.com/premium_photo-1689565611422-b2156cc65e47?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                            alt="">
+                                    </div>
+                                    <div class="part2">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-regular fa-star"></i>
+                                        <h5>Uttam Utkarsh</h5>
+                                        <h6>Student</h6>
+                                    </div>
+
+                                </div>
+                                <div class="row2">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus porro nostrum
+                                        placeat laudantium corrupti ullam.</p>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="onlycolor"></div>
+
+        </div>
+        <div class="page8">
+            <div class="col1">
+                <div class="part1">
+                    <h4>events</h4>
+                </div>
+                <div class="part2">
+                    <h6>/arts</h6>
+                    <h6>/culture</h6>
+                    <h6>/exibition</h6>
+                    <h6>/seminar</h6>
+                    <h6>/sports</h6>
+                    <h6>/recreation</h6>
+                    <h6>/health care</h6>
+                </div>
+            </div>
+            <div class="col2">
+                <div class="part1">
+                    <h1 data-scroll data-scroll-direction="vertical " data-scroll-speed="2">recent and <br>upcoming
+                        events</h1>
+                </div>
+                <div class="  part2">
+                    <div data-scroll data-scroll-direction="vertical " data-scroll-speed="2" class=" contain-details">
+                        <div class="part-1">
+                            <h6>OCT 20,2022</h6>
+                            <h6 id="but-bac">Bachelor</h6>
+                        </div>
+                        <div class="part-2">
+                            <h4>The middle east in the <br>twentieth century</h4>
+                        </div>
+                        <div class="part-3">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum exercitationem ab, nobis
+                                necessitatibus possimus accusantium ratione aliquam nesciunt magni nemo tempore eveniet
+                                fugiat ad quia repudiandae, adipisci placeat itaque id qui, vitae praesentium. Aut iste
+                                tempora alias consequatur. Aliquid, laudantium. Error aliquam quia voluptate sit,
+                                voluptatum optio qui molestias, tempora quam enim ullam excepturi animi architecto
+                                neque.
+                            </p>
+                        </div>
+                        <div class="part-4">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div class="contain-details">
+                        <div class="part-1">
+                            <h6>OCT 20,2022</h6>
+                            <h6 id="but-bac">Bachelor</h6>
+                        </div>
+                        <div class="part-2">
+                            <h4>The middle east in the <br>twentieth century</h4>
+                        </div>
+                        <div class="part-3">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum exercitationem ab, nobis
+                                necessitatibus possimus accusantium ratione aliquam nesciunt magni nemo tempore eveniet
+                                fugiat ad quia repudiandae, adipisci placeat itaque id qui, vitae praesentium. Aut iste
+                                tempora alias consequatur. Aliquid, laudantium. Error aliquam quia voluptate sit,
+                                voluptatum optio qui molestias, tempora quam enim ullam excepturi animi architecto
+                                neque.
+                            </p>
+                        </div>
+                        <div class="part-4">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="part2">
+                    <div class="contain-details">
+                        <div class="part-1">
+                            <h6>OCT 20,2022</h6>
+                            <h6 id="but-bac">Bachelor</h6>
+                        </div>
+                        <div class="part-2">
+                            <h4>The middle east in the <br>twentieth century</h4>
+                        </div>
+                        <div class="part-3">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum exercitationem ab, nobis
+                                necessitatibus possimus accusantium ratione aliquam nesciunt magni nemo tempore eveniet
+                                fugiat ad quia repudiandae, adipisci placeat itaque id qui, vitae praesentium. Aut iste
+                                tempora alias consequatur. Aliquid, laudantium. Error aliquam quia voluptate sit,
+                                voluptatum optio qui molestias, tempora quam enim ullam excepturi animi architecto
+                                neque.</p>
+                        </div>
+                        <div class="part-4">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                    <div data-scroll data-scroll-direction="vertical " data-scroll-speed="2" class="contain-details">
+                        <div class="part-1">
+                            <h6>OCT 20,2022</h6>
+                            <h6 id="but-bac">Bachelor</h6>
+                        </div>
+                        <div class="part-2">
+                            <h4>The middle east in the <br>twentieth century</h4>
+                        </div>
+                        <div class="part-3">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum exercitationem ab, nobis
+                                necessitatibus possimus accusantium ratione aliquam nesciunt magni nemo tempore eveniet
+                                fugiat ad quia repudiandae, adipisci placeat itaque id qui, vitae praesentium. Aut iste
+                                tempora alias consequatur. Aliquid, laudantium. Error aliquam quia voluptate sit,
+                                voluptatum optio qui molestias, tempora quam enim ullam excepturi animi architecto
+                                neque.
+                            </p>
+                        </div>
+                        <div class="part-4">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page9">
+            <div class="row1">
+                <h1>new & articles</h1>
+                <p>For any news or event to be uploaded please go to Submit Content page and submit.</p>
+            </div>
+            <div class="row2">
+                <div class="owl-carousel owl-theme myowl">
+                    <div class="item myown">
+                        <div class="row-1">
+                            <h6>12Feb24</h6>
+                            <i class="fa-solid fa-square-up-right"></i>
+                        </div>
+                        <div class="row-2">
+                            <h2><a
+                                    href="https://iisc.ac.in/events/iisc-and-blockchain-for-impact-bfi-collaborate-to-accelerate-biomedical-innovation/">IISc
+                                    and Blockchain For Impact (BFI) Collaborate to Accelerate Biomedical Innovation</a>
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="item myown">
+                        <div class="row-1">
+                            <h6>27Mar24</h6>
+                            <i class="fa-solid fa-square-up-right"></i>
+                        </div>
+                        <div class="row-2">
+                            <h2><a href="https://iisc.ac.in/events/paving-new-paths-for-sustainable-construction/">Paving
+                                    new paths for sustainable construction
+                                </a></h2>
+                        </div>
+                    </div>
+                    <div class="item myown">
+                        <div class="row-1">
+                            <h6>12Apr24</h6>
+                            <i class="fa-solid fa-square-up-right"></i>
+                        </div>
+                        <div class="row-2">
+                            <h2><a href="https://iisc.ac.in/events/novel-hydrogel-removes-microplastics-from-water/">Novel
+                                    hydrogel removes microplastics from water</a></h2>
+                        </div>
+                    </div>
+                    <div class="item myown">
+                        <div class="row-1">
+                            <h6>22May24</h6>
+                            <i class="fa-solid fa-square-up-right"></i>
+                        </div>
+                        <div class="row-2">
+                            <h2><a
+                                    href="https://iisc.ac.in/events/fujitsu-limited-and-iisc-sign-mou-for-collaboration-in-data-science/">Fujitsu
+                                    Limited and IISc sign MoU for collaboration in data science
+                                </a></h2>
+                        </div>
+                    </div>
+                    <div class="item myown">
+                        <div class="row-1">
+                            <h6>30May24</h6>
+                            <i class="fa-solid fa-square-up-right"></i>
+                        </div>
+                        <div class="row-2">
+                            <h2><a
+                                    href="https://iisc.ac.in/events/novel-method-for-mass-production-of-recombinant-proteins/">Novel
+                                    method for mass production of recombinant proteins.</a></h2>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="row1">
+                <div class="part1">
+                    <div class="col1">
+                        <h2>about us</h2>
+                        <h6>facts</h6>
+                        <h6>history</h6>
+                        <h6>contact</h6>
+                        <h6>management</h6>
+                    </div>
+                    <div class="col1">
+                        <h2>faculty</h2>
+                        <h6>business</h6>
+                        <h6>engineering</h6>
+                        <h6>law</h6>
+                        <h6>Humanities & science</h6>
+                    </div>
+                    <div class="col1">
+                        <h2>department</h2>
+                        <h6>business</h6>
+                        <h6>engineering</h6>
+                        <h6>Humanities & science</h6>
+                        <h6>law</h6>
+                    </div>
+                    <div class="col1">
+                        <h2>Admission</h2>
+                        <h6>graduate</h6>
+                        <h6>undergraduate</h6>
+                        <h6>financial aid</h6>
+                        <h6>phd</h6>
+                    </div>
+                    <div class="col1">
+                        <h2>updates</h2>
+                        <h6>notice</h6>
+                        <h6>results</h6>
+                        <h6>login</h6>
+                        <h6>alumni</h6>
+                    </div>
+                </div>
+                <div class="part2">
+                    <h5 id="appl">applying</h5>
+                    <h5>scholarship</h5>
+                    <h5 id="career">career</h5>
+                </div>
+            </div>
+            <div class="row2">
+                <div class="part1">
+                    <div class="img-container">
+                        <img src="../static/image/img2.jpg"" alt="">
+                    </div>
+                </div>
+                <div class="part2">
+                    <h6>copyright © 2022 xyzcompany</h6>
+                    <h6>all rights reserved</h6>
+                    <h6 id="privacy">privacy & policy</h6>
+                </div>
+                <div class="part3">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <!--  Gsap is needed for Basic Effects -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Scroll Trigger is needed for Scroll Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <!-- Three.js is needed for 3d Effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+
+    <!-- ControlKit is needed for Debug Panel -->
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

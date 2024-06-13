@@ -1,0 +1,32 @@
+
+body {
+    background-image: url("https://images.unsplash.com/photo-1659256297426-cb50e6a36fd8?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position: center;
+    background-size: cover;
+}
+
+h3 {
+    font-family: Calibri;
+    font-size: 25pt;
+    font-style: normal;
+    font-weight: bold;
+    color: rgb(12, 0, 93);
+    text-align: center;
+    text-decoration: underline
+}
+
+table {
+    font-family: Calibri;
+    color: rgb(7, 7, 7);
+    font-size: 11pt;
+    font-style: normal;
+    font-weight: bold;
+    text-align: center;
+    /* background-color: rgba(105, 90, 205, 0.42); */
+    border-collapse: collapse;
+    border: 2px solid navy
+}
+
+table.inner {
+    border: 0px
+}
