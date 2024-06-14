@@ -2,8 +2,8 @@ body {
 	font-family: Arial;
 }
 
-.container {
-	max-width: 1180px;
+.container2 {
+	width: 100vh;
 	margin: 0 auto;
 	line-height: 1.5;
 }
