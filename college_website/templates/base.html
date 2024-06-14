@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+        <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+            integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+            integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- for login -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+
+        
+        {% block cssfile %}{% endblock %}
+        <!-- swiper js -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" 
+    </head>
+
+        <body>
+
+            <div class="page1">
+                <div class="container">
+                    <div class="top">
+
+                        <div class="row1 for-hover">
+                            <div class="part1 contacts"><a href="mailto:uutkarsh97@gmail.com"><i
+                                        class="fa-solid fa-envelope"></i>:demo@gmail.com</a></div>
+
+                            <div class="part-small "><a href="mailto:uutkarsh97@gmail.com"><i
+                                        class="fa-solid fa-envelope"></i></a>
+                            </div>
+
+                            <div class="part2 contacts"><a href="tel:9876543210"><i
+                                        class="fa-solid fa-phone"></i>:+919876543210</a>
+                            </div>
+
+                            <div class="part-small"><a href="tel:9876543210"><i class="fa-solid fa-phone"></i></a></div>
+
+                            <div class="part3">
+                                <div class="part1-div"><a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                                </div>
+                                <div class="part1-div"><a href="https://instagram.com"><i
+                                            class="fa-brands fa-square-instagram"></i></a></div>
+                                <div class="part1-div"><a href="https://www.x.com"><i class="fa-brands fa-twitter"></i></a></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row2 for-hover">
+                            <div class="col1">
+                                <img src="../static/image/img2.jpg" alt="">
+
+                            </div>
+                            <div class="col2">
+                                <div class="mod"><a href="{% url 'index' %}">Home</a></div>
+                                <div class="mod"><a href="./About us/index.html">About us</a></div>
+                                <div class="mod"><a href="./AdmissionForm/index.html">Admission</a></div>
+                                <div class="mod"><a href="./News/index.html">News</a></div>
+                                <div class="mod"><a href="./Gallery/index.html">Gallery</a></div>
+                                <div class="mod"><a href="./contactUs/index.html">Contact Us</a></div>
+
+
+
+
+
+
+                            </div>
+                            <div class="col3">
+                                <a href="#"><i class="fa-solid fa-user profile"></i></a>
+                                <i id="menu" class=" fa-solid fa-bars profile"></i>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        
+            {% block content %}{% endblock %}
+            
+
+            <footer>
+                <div class="row1">
+                    <div class="part1">
+                        <div class="col1">
+                            <h2>about us</h2>
+                            <h6>facts</h6>
+                            <h6>history</h6>
+                            <h6>contact</h6>
+                            <h6>management</h6>
+                        </div>
+                        <div class="col1">
+                            <h2>faculty</h2>
+                            <h6>business</h6>
+                            <h6>engineering</h6>
+                            <h6>law</h6>
+                            <h6>Humanities & science</h6>
+                        </div>
+                        <div class="col1">
+                            <h2>department</h2>
+                            <h6>business</h6>
+                            <h6>engineering</h6>
+                            <h6>Humanities & science</h6>
+                            <h6>law</h6>
+                        </div>
+                        <div class="col1">
+                            <h2>Admission</h2>
+                            <h6>graduate</h6>
+                            <h6>undergraduate</h6>
+                            <h6>financial aid</h6>
+                            <h6>phd</h6>
+                        </div>
+                        <div class="col1">
+                            <h2>updates</h2>
+                            <h6>notice</h6>
+                            <h6>results</h6>
+                            <h6>login</h6>
+                            <h6>alumni</h6>
+                        </div>
+                    </div>
+                    <div class="part2">
+                        <h5 id="appl">applying</h5>
+                        <h5>scholarship</h5>
+                        <h5 id="career">career</h5>
+                    </div>
+                </div>
+                <div class="row2">
+                    <div class="part1">
+                        <div class="img-container">
+                            <img src="../static/image/img2.jpg"" alt="">
+                        </div>
+                    </div>
+                    <div class="part2">
+                        <h6>copyright © 2022 xyzcompany</h6>
+                        <h6>all rights reserved</h6>
+                        <h6 id="privacy">privacy & policy</h6>
+                    </div>
+                    <div class="part3">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </div>
+            </footer>
+
+
+            
+
+            <script src="{% static 'script.js' %}"></script>
+        </body>
+
+</html>

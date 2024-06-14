@@ -1,12 +1,11 @@
-<html>
-
-<head>
-    <title>Student Registration Form</title>
-    <link rel="stylesheet" href="AdmissionForm.css">
-
-</head>
-
-<body>
+{% extends "base.html" %}
+{% block title %}Admission{% endblock %}
+{% block cssfile %}
+<link rel="stylesheet" href="/static/base.css">
+<link rel="stylesheet" href="/static/admissionForm.css">
+{% endblock %}
+{% block content %}
+<div class="main">
     <h3>STUDENT REGISTRATION FORM</h3>
 
 
@@ -295,6 +294,7 @@
 
     </form>
 
-</body>
+</div>
 
-</html>
+
+{% endblock %}

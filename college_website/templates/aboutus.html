@@ -1,105 +1,104 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About us</title>
-    <link rel="stylesheet" href="aboutus.css">
-</head>
+{% block title %}
+About Us
+{% endblock %}
 
-<body>
-    <main>
-        <header>
-            <h1>From the Director</h1>
-        </header>
+{% block cssfile %}
+<link rel="stylesheet" href="/static/base.css">
+<link rel="stylesheet" href="/static/aboutus.css">
+{% endblock %}
 
-        <div class="description">
-            <div class="dp"></div>
-            <div class="content">
-                <p>
-                    The Indian Institute of Science (IISc) was established in 1909 by a visionary partnership between
-                    the industrialist Jamsetji Nusserwanji Tata, the Mysore royal family and the Government of India.
+{% block content %}
+<main>
+    <header>
+        <h1>From the Director</h1>
+    </header>
 
-                    Over the last 111 years, IISc has become India’s premier institute for advanced scientific and
-                    technological research and education. Its mandate is “to provide for advanced instruction and to
-                    conduct original investigations in all branches of knowledge as are likely to promote the material
-                    and industrial welfare of India.” In keeping with this guiding principle, the Institute has strived
-                    to foster a balance between the pursuit of basic knowledge and applying its research for industrial
-                    and social benefit.
+    <div class="description">
+        <div class="dp"></div>
+        <div class="content">
+            <p>
+                The Indian Institute of Science (IISc) was established in 1909 by a visionary partnership between
+                the industrialist Jamsetji Nusserwanji Tata, the Mysore royal family and the Government of India.
 
-                    IISc’s reputation and pre-eminence ensures that it attracts the best young faculty members trained
-                    in the best laboratories around the world. In 2018, IISc was selected as an Institution of Eminence
-                    (IoE) by the Government of India, and it consistently figures among the top Indian institutions in
-                    world university rankings.
+                Over the last 111 years, IISc has become India’s premier institute for advanced scientific and
+                technological research and education. Its mandate is “to provide for advanced instruction and to
+                conduct original investigations in all branches of knowledge as are likely to promote the material
+                and industrial welfare of India.” In keeping with this guiding principle, the Institute has strived
+                to foster a balance between the pursuit of basic knowledge and applying its research for industrial
+                and social benefit.
 
-                    IISc’s research output is diverse, interdisciplinary and cuts across traditional boundaries. The
-                    Institute has over 42 academic departments and centres that come under six divisions. It also places
-                    equal emphasis on student learning, with about 4000 students pursuing several postgraduate and PhD
-                    programmes, as well as a dedicated four-year undergraduate programme aimed at providing
-                    research-oriented training for young students in the basic sciences.
+                IISc’s reputation and pre-eminence ensures that it attracts the best young faculty members trained
+                in the best laboratories around the world. In 2018, IISc was selected as an Institution of Eminence
+                (IoE) by the Government of India, and it consistently figures among the top Indian institutions in
+                world university rankings.
 
-                    IISc has a vibrant and diverse campus spread over 440 acres of greenery in the city of Bengaluru
-                    (formerly Bangalore), India’s hub of high-tech companies (in aerospace, electronics, and information
-                    technology), educational and research institutions, and numerous start-ups. With the help of a
-                    recently-established office called DIGITS, we are now in the process of creating a best-in-class IT
-                    and networking system. In recent times, IISc has also entered into collaborations with several
-                    technology giants to find solutions to problems in strategic areas. Many of its faculty members have
-                    established their own start-ups to take their research directly to society.
+                IISc’s research output is diverse, interdisciplinary and cuts across traditional boundaries. The
+                Institute has over 42 academic departments and centres that come under six divisions. It also places
+                equal emphasis on student learning, with about 4000 students pursuing several postgraduate and PhD
+                programmes, as well as a dedicated four-year undergraduate programme aimed at providing
+                research-oriented training for young students in the basic sciences.
 
-                    During its centenary in 2009, IISc acquired a new campus in Challakere taluk, Chitradurga district,
-                    Karnataka. The flagship project of this 1,500-acre campus, a training programme for rural science
-                    and mathematics school and college teachers, has trained more than 11,000 teachers, and has been
-                    recognized as a Centre for Excellence by the Government of India.
+                IISc has a vibrant and diverse campus spread over 440 acres of greenery in the city of Bengaluru
+                (formerly Bangalore), India’s hub of high-tech companies (in aerospace, electronics, and information
+                technology), educational and research institutions, and numerous start-ups. With the help of a
+                recently-established office called DIGITS, we are now in the process of creating a best-in-class IT
+                and networking system. In recent times, IISc has also entered into collaborations with several
+                technology giants to find solutions to problems in strategic areas. Many of its faculty members have
+                established their own start-ups to take their research directly to society.
 
-                    In the coming years, IISc aims to position itself among the world’s foremost academic institutions.
-                    We will focus on building our core research strengths in all frontiers of science and engineering,
-                    develop world-class teaching programmes, nurture translational research and encourage the incubation
-                    of successful start-ups. We will continue to empower researchers from diverse disciplines to work
-                    together to solve pressing challenges. We will also continue to carry out activities with direct
-                    social impact, such as training school teachers, disseminating sustainable rural technologies, and
-                    research in areas like climate change, healthcare, water management, and renewable energy. At the
-                    same time, we seek to embrace modern professional practices, and benchmark ourselves against
-                    international standards.
+                During its centenary in 2009, IISc acquired a new campus in Challakere taluk, Chitradurga district,
+                Karnataka. The flagship project of this 1,500-acre campus, a training programme for rural science
+                and mathematics school and college teachers, has trained more than 11,000 teachers, and has been
+                recognized as a Centre for Excellence by the Government of India.
 
-                    As we move forward to transform this vision into reality, we will create endless opportunities for
-                    students, innovators, teachers, researchers and more in the coming years. I welcome you to join us
-                    in this exciting journey.
+                In the coming years, IISc aims to position itself among the world’s foremost academic institutions.
+                We will focus on building our core research strengths in all frontiers of science and engineering,
+                develop world-class teaching programmes, nurture translational research and encourage the incubation
+                of successful start-ups. We will continue to empower researchers from diverse disciplines to work
+                together to solve pressing challenges. We will also continue to carry out activities with direct
+                social impact, such as training school teachers, disseminating sustainable rural technologies, and
+                research in areas like climate change, healthcare, water management, and renewable energy. At the
+                same time, we seek to embrace modern professional practices, and benchmark ourselves against
+                international standards.
 
-                    <br><br>Govindan Rangarajan
-                    Director
-                </p>
-            </div>
+                As we move forward to transform this vision into reality, we will create endless opportunities for
+                students, innovators, teachers, researchers and more in the coming years. I welcome you to join us
+                in this exciting journey.
+
+                <br><br>Govindan Rangarajan
+                Director
+            </p>
+        </div>
+    </div>
+
+    <div class="container2">
+        <div class="title">
+            <h1>Vision and Mission</h1>
         </div>
 
-        <div class="container2">
-            <div class="title">
-                <h1>Vision and Mission</h1>
-            </div>
-
-            <div class="subcontent">
-                <h2>Vision</h2><br><br>
-                <p>IISc aims to be among the world’s foremost academic institutions through the pursuit of excellence in
-                    research and promotion of innovation by offering world-class education to train future leaders in
-                    science and technology and by applying science and technology breakthroughs for India’s wealth
-                    creation and social welfare.</p>
-            </div>
-            <div class="subcontent">
-                <h2>Mission</h2><br><br>
-                <p>Our mission is to realize our vision by:</p><br>
-                <ul>
-                    <li>Imparting world-class higher education in an environment of fundamental and applied research in
-                        science and engineering</li><br>
-                    <li>Conducting high-impact research, generating new knowledge, and disseminating this knowledge
-                        through publications in top journals and conferences</li><br>
-                    <li>Applying faculty expertise towards the success of national science and technology initiatives
-                    </li><br>
-                    <li>Applying deep knowledge in various areas to create knowhow and developing such knowhow for
-                        utilization by industry and society</li>
-                </ul>
-            </div>
+        <div class="subcontent">
+            <h2>Vision</h2><br><br>
+            <p>IISc aims to be among the world’s foremost academic institutions through the pursuit of excellence in
+                research and promotion of innovation by offering world-class education to train future leaders in
+                science and technology and by applying science and technology breakthroughs for India’s wealth
+                creation and social welfare.</p>
         </div>
-    </main>
-</body>
-
-</html>
+        <div class="subcontent">
+            <h2>Mission</h2><br><br>
+            <p>Our mission is to realize our vision by:</p><br>
+            <ul>
+                <li>Imparting world-class higher education in an environment of fundamental and applied research in
+                    science and engineering</li><br>
+                <li>Conducting high-impact research, generating new knowledge, and disseminating this knowledge
+                    through publications in top journals and conferences</li><br>
+                <li>Applying faculty expertise towards the success of national science and technology initiatives
+                </li><br>
+                <li>Applying deep knowledge in various areas to create knowhow and developing such knowhow for
+                    utilization by industry and society</li>
+            </ul>
+        </div>
+    </div>
+</main>
+{% endblock %}
