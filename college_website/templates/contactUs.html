@@ -4,12 +4,17 @@
 
 {% block cssfile %}
 <link rel="stylesheet" href="/static/base.css" />
-{% endblock %}
-{% block cssfile2 %}
 <link rel="stylesheet" href="/static/contactUS.css" />
 {% endblock %}
 
 {% block content %}
+
+{% if message2  %}
+<script>
+	alert('{{message2}}')
+</script>
+{% endif %}
+
 <div class="contact-form-container">
 	<div class="contact-us">
 		<div class="contact-header">
@@ -39,7 +44,7 @@
 			Let's Get Started
 		</h1>
 		<h2>
-			Contact us to start your next project!
+			Contact us to start your new journey with us
 		</h2>
 	</div>
 	<div class="address">
@@ -54,19 +59,23 @@
 	<div class="phone">
 		<i class="fas fa-phone-alt"></i>
 		<h3>
-			757 287 1608
+			+919876543210
+
 		</h3>
 	</div>
 	<div class="email">
 		<i class="fas fa-envelope"></i>
 		<h3>
-			hello@adept.com
+			demo@gmail.com
 		</h3>
 	</div>
 	<div class="contact-form">
-		<form>
-			<input placeholder="Name" type="text" /><input placeholder="Email" type="email" /><textarea
-				placeholder="Tell us about your project..." rows="4"></textarea><button type="button">SEND </button>
+		<form  method="post">
+			{% csrf_token %}
+			<input placeholder="Name" name="user_name" type="text" />
+			<input placeholder="Email" name="user_email" type="email" />
+			<textarea placeholder="Tell us about your consern" name="user_description" rows="4"></textarea>
+			<button type="submit">SEND </button>
 		</form>
 	</div>
 </div>

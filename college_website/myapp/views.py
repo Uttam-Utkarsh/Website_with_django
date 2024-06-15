@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from myapp.models import Contact
+from django.http import HttpResponse  
 
 # Create your views here.
 
@@ -12,7 +14,15 @@ def admission(request):
     return render(request,'admissionForm.html')
 
 def contactus (request):
-    return render(request,'contactUS.html')
+    context={}
+    if request.method == 'POST':
+        Name = request.POST.get('user_name')
+        email = request.POST.get('user_email')
+        message = request.POST.get('user_description')
+        obj = Contact(Name = Name, Email = email, Description = message)
+        obj.save()
+        context['message2']= (f'Dear {Name} Thanks for contacting us')
+    return render(request,'contactUS.html',context)
 
 def gallery(request):
     return render(request,'gallery.html')

@@ -1,6 +1,6 @@
 function get_image() {
     var con = document.querySelectorAll(".ri-image-fill");
-    var pic_container = document.querySelector(".col2");
+    var pic_container = document.querySelector(".col22");
     con.forEach(function (item) {
         item.addEventListener("click", function (event) {
             var imgaddress = event.target.getAttribute("data-");

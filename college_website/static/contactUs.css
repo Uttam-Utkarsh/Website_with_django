@@ -8,9 +8,11 @@
 
 /* Pretty Stuff */
 .contact-form-container {
-	background-color: #d72424;
-	color: #0bda37;
+	/* background-color: #d72424; */
 	font-family: "Lato", sans-serif;
+    height: 80vh;
+    margin: 20px;
+    border: 1px solid black;
 }
 
 .contact-us {
