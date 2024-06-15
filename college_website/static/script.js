@@ -109,7 +109,7 @@ function front_page_Animation() {
       noiseDetail: { value: 7.44, range: [0, 100] },
       distortionAmount: { value: 2.21, range: [0, 10] },
       scale: { value: 35.88, range: [0, 100] },
-      speed: { value: 0.78, range: [0, 1] },
+      speed: { value: 0.50, range: [0, 1] },
       zindex: { value: -9996999, range: [-9999999, 9999999] },
       aspect: { value: 2.136478510252749 },
       ignoreShapeAspect: { value: true },
@@ -378,4 +378,4 @@ fifthpage();
 sixthpage();
 seventhpage();
 eightpage();
-hamburger();
+// hamburger();

@@ -1,65 +1,73 @@
 {% extends "base.html" %}
+
 {% block title %}Contact Us{% endblock %}
+
 {% block cssfile %}
-<link rel="stylesheet" href="/static/base.css">
-<link rel="stylesheet" href="/static/contactUS.css">
+<link rel="stylesheet" href="/static/base.css" />
 {% endblock %}
+{% block cssfile2 %}
+<link rel="stylesheet" href="/static/contactUS.css" />
+{% endblock %}
+
 {% block content %}
-<div class="container2">
-	<div class="site-banner">
-		{% comment %} <div class="header-menu">
-			<a id="logo" href="#"><img src="../image/img2.jpg" alt=""></a> 
-			<span id="menu-icon" onClick="toggleMenu()"><img src="" /></span>
-			<span id="header-right-menu"> 
-				<a href="../index.html">Home</a> 
-				<a href="../About us/index.html">AboutUs</a> 
-				<a href="#">News</a>
-			</span>
-		</div> {% endcomment %}
-		<h1 class="heading">Contact Us</h1>
+<div class="contact-form-container">
+	<div class="contact-us">
+		<div class="contact-header">
+			<h1>
+				CONTACT US
+			</h1>
+		</div>
+		<div class="social-bar">
+			<ul>
+				<li>
+					<i class="fab fa-facebook-f"></i>
+				</li>
+				<li>
+					<i class="fab fa-twitter"></i>
+				</li>
+				<li>
+					<i class="fab fa-instagram"></i>
+				</li>
+				<li>
+					<i class="fab fa-dribbble"></i>
+				</li>
+			</ul>
+		</div>
 	</div>
-	<div class="footer">
-		<div class="footer-column mapcontainer"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.8089078559574!2d85.33432661110723!3d23.358936703604027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f4e17511aaab73%3A0xf7f7198c17ba7a3c!2sSt.Paul&#39;s%20College%2C%20Bahu%20Bazaar%2C%20Ranchi!5e0!3m2!1sen!2sin!4v1717505876823!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-		<div class="footer-column">
-			<div class="tile-content">
-				<h1>Meet Us</h1>
-				<div class="contact-row">
-					<i class="ri-phone-fill"></i><span class="tile-field">+466723723666</span>
-				</div>
-				<div class="contact-row">
-					<i class="ri-mail-fill"></i><span class="tile-field">contact@admin.com</span>
-				</div>
-				<div class="contact-row">
-					<i class="ri-building-2-fill"></i><span class="tile-field">BhauBazar Ranchi Jharkhand</span>
-				</div>
-			</div>
-		</div>
-		<div class="footer-column contact-form-container">
-			<div class="tile-content">
-				<form method="POST">
-					<h1>Contact</h1>
-					<div class="contact-row">
-						<input type="text" class="form-field" placeholder="Name">
-					</div>
-					<div class="contact-row">
-						<textarea rows="5" class="form-field" placeholder="Message"></textarea>
-					</div>
-					<button class="button">Send</button>
-				</form>
-			</div>
-		</div>
+	<div class="header">
+		<h1>
+			Let's Get Started
+		</h1>
+		<h2>
+			Contact us to start your next project!
+		</h2>
+	</div>
+	<div class="address">
+		<i class="fas fa-map-marker-alt"></i>
+		<h3>
+			8266 Gygax
+		</h3>
+		<h3>
+			Norfolk, VA
+		</h3>
+	</div>
+	<div class="phone">
+		<i class="fas fa-phone-alt"></i>
+		<h3>
+			757 287 1608
+		</h3>
+	</div>
+	<div class="email">
+		<i class="fas fa-envelope"></i>
+		<h3>
+			hello@adept.com
+		</h3>
+	</div>
+	<div class="contact-form">
+		<form>
+			<input placeholder="Name" type="text" /><input placeholder="Email" type="email" /><textarea
+				placeholder="Tell us about your project..." rows="4"></textarea><button type="button">SEND </button>
+		</form>
 	</div>
 </div>
-
-{% comment %} <script>
-	function toggleMenu() {
-		var menuElement = document.getElementById("header-right-menu");
-		if (menuElement.style.display === "block") {
-			menuElement.style.display = "none";
-		} else {
-			menuElement.style.display = "block";
-		}
-	}
-</script> {% endcomment %}
 {% endblock %}
-
