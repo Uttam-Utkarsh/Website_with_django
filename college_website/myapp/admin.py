@@ -1,5 +1,5 @@
-from django.contrib import admin
-from myapp.models import Contact 
+from django.contrib import admin 
+from myapp.models import Contact,Profile
 
 # Register your models here.
 
@@ -9,4 +9,5 @@ class ContactAdmin(admin.ModelAdmin):
     list_display = ['id','Name','Email','Description', 'added_on', 'is_active']
 
 admin.site.register(Contact, ContactAdmin)
+admin.site.register(Profile)
 
