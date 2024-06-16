@@ -5,6 +5,12 @@
 <link rel="stylesheet" href="/static/AdmissionForm.css">
 {% endblock %}
 {% block content %}
+
+{% if mesg  %}
+    <script>
+        alert('{{mesg}}')
+    </script>
+{% endif %}
 <b><u>
     <h1>STUDENT REGISTRATION FORM</h1>
 </u> </b>
@@ -14,19 +20,20 @@
     <center> </center>
     <br>
     <div id="form">
-        <form method="get" action="submit.html">
+        <form method="post">
+            {% csrf_token %}
             <table id="table">
                 <tr>
                     <td>FIRST NAME:</td>
                     <td>
-                        <input type="text" name="username" size="30" maxlength="30" placeholder="Enter first name" />
+                        <input type="text" name="firstusername" size="30" maxlength="30" placeholder="Enter first name" />
                         (max 30 characters A-Z and a-z)
                     </td>
                 </tr>
                 <tr>
                     <td>LAST NAME:
                     </td>
-                    <td><input type="text" name="username" size="30" maxlength="30" placeholder="Enter last name" />
+                    <td><input type="text" name="lastusername" size="30" maxlength="30" placeholder="Enter last name" />
                         (max 30 characters A-Z and a-z)
                     </td>
                 </tr>
@@ -39,21 +46,21 @@
                         <input type="number" name="day" size="2" maxlength="2" placeholder="Day" min="1" max="31" />
                         <select name="month">
                             <option value="month">Month</option>
-                            <option value="Jan">Jan</option>
-                            <option value="Feb">Feb</option>
-                            <option value="Mar">Mar</option>
-                            <option value="Apr">Apr</option>
-                            <option value="May">May</option>
-                            <option value="June">June</option>
-                            <option value="July">July</option>
-                            <option value="Aug">Aug</option>
-                            <option value="Sep">Sep</option>
-                            <option value="Oct">Oct</option>
-                            <option value="Nov">Nov</option>
-                            <option value="Dec">Dec</option>
+                            <option value="1">Jan</option>
+                            <option value="2">Feb</option>
+                            <option value="3">Mar</option>
+                            <option value="4">Apr</option>
+                            <option value="5">May</option>
+                            <option value="6">June</option>
+                            <option value="7">July</option>
+                            <option value="8">Aug</option>
+                            <option value="9">Sep</option>
+                            <option value="10">Oct</option>
+                            <option value="11">Nov</option>
+                            <option value="12">Dec</option>
 
                         </select>
-                        <input type="text" name="year" size="5" maxlength="4" placeholder="Year" min="1991"
+                        <input type="text" name="Year" size="5" maxlength="4" placeholder="Year" min="1991"
                             max="2005" />
 
                     </td>
@@ -77,15 +84,17 @@
                 </tr>
                 <tr>
                     <td>GENDER:</td>
-                    <td><input id="female" type="radio" name="gender" value="f">
-                        <label for="female">Female</label>
-                        <input id="male" type="radio" name="gender" value="m">
+                    <td>
+                        <input id="male" type="radio" name="gender" value="Male">
                         <label for="male">Male</label>
+                        <input id="female" type="radio" name="gender" value="Female">
+                        <label for="female">Female</label>
+                        
                     </td>
                 </tr>
                 <tr>
                     <td>ADDRESS:</td>
-                    <td><textarea rows="4" cols="40" id="comments">
+                    <td><textarea name="address" rows="4" cols="40" id="comments">
                  </textarea>
                     </td>
                 </tr>
@@ -116,7 +125,7 @@
                 <tr>
                     <td>COUNTRY:</td>
                     <td>
-                        <input type="text" name="COUNTRY" size="30" maxlength="30" placeholder="Enter your city name" />
+                        <input type="text" name="country" size="30" maxlength="30" placeholder="Enter your city name" />
                     </td>
 
 
@@ -126,13 +135,13 @@
                 <tr>
                     <td>HOBBIES</td>
                     <td>
-                        <input type="checkbox" name="Singing" value="Singing" /> Singing
+                        <input type="checkbox" name="HOBBIES" value="Singing" /> Singing
                         <input type="checkbox" name="HOBBIES" value="dancing" /> Dancing
                         <input type="checkbox" name="HOBBIES" value="Drawing" /> Drawing
-                        <input type="checkbox" name="HOBBIES" value="Sketching" /> Sketching
+                        <input type="checkbox" name="HOBBIES" value="Sketching" /> Gameing
                         <br />
-                        <input type="checkbox" name="HOBBIES" value="Others" /> Others<input type="text" name="HOBBIES"
-                            size="30" maxlength="30" placeholder="Enter any other hobby" />
+                        <input type="checkbox" name="HOBBIES" value="Others" /> Others
+                        <input type="text" name="HOBBIES" size="30" maxlength="30" placeholder="Enter any other hobby" />
                     </td>
                 </tr>
                 <tr>
@@ -149,30 +158,30 @@
                             <tr>
                                 <td>1.</td>
                                 <th>Class X</th>
-                                <td> <input type="text" name="state" size="20" maxlength="20" /></td>
-                                <td><input type="text" name="state" size="15" maxlength="10" /></td>
-                                <td><input type="text" name="state" size="15" maxlength="10" /></td>
+                                <td> <input type="text" name="cl_x_board" size="20" maxlength="20" /></td>
+                                <td><input type="text" name="cl_x_Per" size="15" maxlength="10" /></td>
+                                <td><input type="text" name="cl_x_year" size="15" maxlength="10" /></td>
                             </tr>
                             <tr>
                                 <td>2.</td>
                                 <th>Class XII</th>
-                                <td> <input type="text" name="state" size="20" maxlength="20" /></td>
-                                <td><input type="text" name="state" size="15" maxlength="10" /></td>
-                                <td><input type="text" name="state" size="15" maxlength="10" /></td>
+                                <td> <input type="text" name="cl_12_board" size="20" maxlength="20" /></td>
+                                <td><input type="text" name="cl_12_Per" size="15" maxlength="10" /></td>
+                                <td><input type="text" name="cl_12_year" size="15" maxlength="10" /></td>
                             </tr>
                             <tr>
                                 <td>3.</td>
                                 <th>Graduation</th>
-                                <td> <input type="text" name="state" size="20" maxlength="20" /></td>
-                                <td><input type="text" name="state" size="15" maxlength="10" /></td>
-                                <td><input type="text" name="state" size="15" maxlength="10" /></td>
+                                <td> <input type="text" name="cl_g_board" size="20" maxlength="20" /></td>
+                                <td><input type="text" name="cl_g_Per" size="15" maxlength="10" /></td>
+                                <td><input type="text" name="cl_g_year" size="15" maxlength="10" /></td>
                             </tr>
                             <tr>
                                 <td>4.</td>
                                 <th>Masters</th>
-                                <td> <input type="text" name="state" size="20" maxlength="20" /></td>
-                                <td><input type="text" name="state" size="15" maxlength="10" /></td>
-                                <td><input type="text" name="state" size="15" maxlength="10" /></td>
+                                <td> <input type="text" name="cl_m_board" size="20" maxlength="20" /></td>
+                                <td><input type="text" name="cl_m_Per" size="15" maxlength="10" /></td>
+                                <td><input type="text" name="cl_m_year" size="15" maxlength="10" /></td>
                             </tr>
                             <tr>
                                 <td></td>
