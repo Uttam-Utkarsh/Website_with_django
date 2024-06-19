@@ -59,7 +59,7 @@ def admission(request):
         context['mesg']= (f'Dear {FName} Registered Succesfull')
         # time.sleep(2)
         # return HttpResponseRedirect('/')
-    return render(request,'admissionForm.html',context)
+    return render(request,'AdmissionForm.html',context)
 
 def contactus (request):
     context={}
@@ -73,10 +73,10 @@ def contactus (request):
     return render(request,'contactUS.html',context)
 
 def gallery(request):
-    return render(request,'gallery.html')
+    return render(request,'Gallery.html')
 
 def news(request):
-    return render(request,'news.html')
+    return render(request,'News.html')
 
 def demo(request):
     context={}
