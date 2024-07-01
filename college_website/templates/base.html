@@ -11,6 +11,12 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+        <!-- for login -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="base.css">
     {% block cssfile %}{% endblock %}
     <!-- swiper js -->
 
@@ -64,14 +70,65 @@
 
                     </div>
                     <div class="col3">
-                        <a href="#"><i class="fa-solid fa-user profile"></i></a>
-                        <i id="menu" class=" fa-solid fa-bars profile"></i>
+                        <a href="#"><i class="fa-solid fa-user profile1"></i></a>
+                        <i id="menu" class=" fa-solid fa-bars profile1"></i>
 
                     </div>
 
                 </div>
 
             </div>
+        </div>
+        <div class="hamburger-menu">
+            <div class="wrapper">
+                <div class="title-text">
+                    <div class="title login">Login Form</div>
+                    <div class="title signup">Signup Form</div>
+                </div>
+                <div class="form-container">
+                    <div class="slide-controls">
+                        <input type="radio" name="slide" id="login" checked>
+                        <input type="radio" name="slide" id="signup" =>
+                        <label for="login" class="slide login">Login</label>
+                        <label for="signup" class="slide signup">Signup</label>
+                        <div class="slider-tab"></div>
+                    </div>
+                    <div class="form-inner">
+                        <form method="post" action="{% url 'demo' %}" class="login">
+                            {% csrf_token %}
+                            <div class="field">
+                                <input type="text" name="emailaddress" placeholder="Email Address" required>
+                            </div>
+                            <div class="field">
+                                <input type="password"   name="userpassword" placeholder="Password" required>
+                            </div>
+                            <div class="pass-link"><a href="#">Forgot password?</a></div>
+                            <div class="field btn">
+                                <div class="btn-layer"></div>
+                                <input type="submit" value="Login">
+                            </div>
+                            <div class="signup-link">Not a member? <a href="#">Signup now</a></div>
+                        </form>
+                        <form method="post" class="signup">
+                            {% csrf_token %}
+                            <div class="field">
+                                <input type="text" name="U_name" placeholder="Name" required>
+                            </div>
+                            <div class="field">
+                                <input type="text" name="U_email" placeholder="Email Address" required>
+                            </div>
+                            <div class="field">
+                                <input type="password" name="U_password" placeholder=" password" required>
+                            </div>
+                            <div class="field btn">
+                                <div class="btn-layer"></div>
+                                <input type="submit" value="Signup">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -143,7 +200,7 @@
     </footer>
 
     {% block forjava %}{% endblock %}
-
+    <script src="/static/login.js"></script>
 </body>
 
 </html>

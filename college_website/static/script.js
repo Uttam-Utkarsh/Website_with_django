@@ -163,7 +163,7 @@ function front_page() {
 
 function secondpage() {
   gsap.from(".page2 .row1 .col1 h5", {
-    x: -260,
+    x: -400,
     duration: 1,
     rotate: 360,
     scrollTrigger: {
@@ -254,7 +254,7 @@ function fifthpage() {
 function sixthpage() {
   // var tl = gsap.timeline()
   gsap.from(".page6 .row1 .part1 h1", {
-    x: "-40vw",
+    x: "-80vw",
     ease: "power1.inout",
     duration: 1,
     scrollTrigger: {
@@ -344,6 +344,7 @@ function eightpage() {
 }
 
 function hamburger() {
+  console.log("hellp")
   var profileisopen = false
   var page1 = document.querySelector(".page1");
   var profile = document.querySelector(".profile1");
