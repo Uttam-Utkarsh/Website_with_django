@@ -1,5 +1,5 @@
 from django.contrib import admin 
-from myapp.models import Contact,Profile,Registration_form
+from myapp.models import Contact,Profile,Registration_form,Notice,Programs
 
 # Register your models here.
 
@@ -15,4 +15,6 @@ class ContactAdmin(admin.ModelAdmin):
 admin.site.register(Contact, ContactAdmin)
 admin.site.register(Profile)
 admin.site.register(Registration_form)
+admin.site.register(Notice)
+admin.site.register(Programs)
 

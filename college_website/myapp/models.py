@@ -59,4 +59,35 @@ class Registration_form(models.Model):
         return self.student_first_name + ' ' + self.student_last_name
     
     class Meta:
-        verbose_name =  "Students Data"       
+        verbose_name =  "Students Data"   
+        
+# for news and event section
+
+category = (
+    ("Events","Events"),
+    ("Campus-News","Campus News"),
+    ("Notice","Notice")
+)
+
+class Notice(models.Model):
+    category = models.CharField(max_length=20,choices= category,default="Events")
+    description = models.TextField(max_length=50) 
+    
+    def __str__(self):
+        return self.category + " : " + self.description
+    
+    
+# Academic programes
+
+category = (
+    ("Bachelor","Bachelor"),
+    ("Master","Master"),
+    ("Phd","Phd")
+)
+
+class Programs(models.Model):
+    category = models.CharField(max_length=20,choices=category,default="Bachelor")
+    title = models.TextField(max_length=20)
+    
+    def __str__(self):
+        return self.category + " : " + self.title
