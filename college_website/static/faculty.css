@@ -1,0 +1,82 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+html,body{
+width: 100%;
+height: 100%;
+background-image: url("https://images.unsplash.com/photo-1522441815192-d9f04eb0615c?q=80&w=2454&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+
+.main{
+    height: 400vh;
+    width: 100vw;
+}
+
+
+.Title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: 3vw;
+    text-transform: uppercase;
+    margin-top: 1vh;
+}
+
+.row-for-card{
+    width: 97vw;
+    height: 45vh;
+    /* background-color: rgb(153, 112, 58); */
+    margin: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cards{
+    width: 30vw;
+    height: 50vh;
+    /* background-color: rgb(98, 98, 123); */
+    border-radius: 20px;
+    color: black;
+    border: 1.5px solid black;
+    
+}
+.cards-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.img-section{
+    width: 20vw;
+    height: 20vh;
+    /* margin-left: 5vw; */
+    margin: 20px 5vw ;
+    background-color: aquamarine;
+    overflow: hidden;
+}
+.img-section img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.content-section{
+    width: 20vw;
+    height: 20vh;
+    margin: 20px 5vw ;
+    
+}
+
+.commerce-row{
+    display: flex;
+    align-items:flex-start ;
+    margin-left: 2vw;
+    margin-top: 2vw;
+}

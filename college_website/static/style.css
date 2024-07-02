@@ -530,6 +530,11 @@
     .page3 .row3 h6 {
         margin: 0px 10px;
         font-size: 3vw;
+        cursor: pointer;
+    }
+
+    .active, .page3 .row3 h6:hover {
+        color: rgb(0, 6, 0);
     }
 
     .page3 .row4 {
@@ -1018,12 +1023,19 @@
         font-size: 1.8vw;
         margin-bottom: 10rem;
     }
+    .page8 .col1 .part2{
+        color: #626161;
 
+    }
     .page8 .col1 .part2 h6 {
         text-transform: capitalize;
         font-size: 2vw;
         margin-top: 20px;
+        cursor: pointer;
 
+    }
+    .active1, .page8 .col1 .part2 h6:hover {
+        color: #000;
     }
 
     .page8 .col2 {

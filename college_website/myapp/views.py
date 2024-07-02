@@ -95,3 +95,7 @@ def demo(request):
 def user_logout(request):
     logout(request)
     return HttpResponseRedirect('/')
+
+
+def faculty(request):
+    return render(request,'faculty.html')

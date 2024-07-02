@@ -28,4 +28,5 @@ urlpatterns = [
     path('admission',views.admission, name='admission'),
     path('demo/',views.demo, name='demo'),
     path('user_logout/',views.user_logout, name='user_logout'),
+    path('faculty/',views.faculty, name='faculty'),
 ]

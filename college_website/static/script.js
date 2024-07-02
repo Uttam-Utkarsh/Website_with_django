@@ -217,6 +217,24 @@ function thirdpage() {
   });
 }
 
+function thirdpage_Selection(){
+// Get the container element
+var h6Container = document.querySelector(".page3 .row3");
+
+// Get all buttons with class="btn" inside the container
+var h6 = h6Container.getElementsByClassName("options");
+
+// Loop through the buttons and add the active class to the current/clicked button
+for (var i = 0; i < h6.length; i++) {
+  h6[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+}
+
 function fifthpage() {
   var t1 = gsap.timeline({
     scrollTrigger: {
@@ -342,6 +360,23 @@ function eightpage() {
     },
   });
 }
+function eightpage_Selection(){
+  // Get the container element
+  var h6Container = document.querySelector(".page8 .part2");
+  
+  // Get all buttons with class="btn" inside the container
+  var h6 = h6Container.getElementsByClassName("options2");
+  
+  // Loop through the buttons and add the active class to the current/clicked button
+  for (var i = 0; i < h6.length; i++) {
+    h6[i].addEventListener("click", function() {
+      var current = document.getElementsByClassName("active1");
+      current[0].className = current[0].className.replace(" active1", "");
+      this.className += " active1";
+    });
+  }
+  
+  }
 
 function hamburger() {
   console.log("hellp")
@@ -394,9 +429,11 @@ front_page();
 front_page_Animation();
 secondpage();
 thirdpage();
+thirdpage_Selection();
 fifthpage();
 sixthpage();
 seventhpage();
 eightpage();
+eightpage_Selection();
 hamburger();
 signuppage();
