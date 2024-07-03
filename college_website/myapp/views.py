@@ -9,7 +9,11 @@ import time
 # Create your views here.
 
 def index(request):
-    context={}
+    
+    academic_data = Programs.objects.all()
+    context={
+        'academic_data':academic_data,
+    }
     if request.method == 'POST':
         Name = request.POST.get('U_name')
         Email = request.POST.get('U_email')
@@ -19,6 +23,7 @@ def index(request):
         pro = Profile(P_Name = Name, P_Email = Email, P_Password = Password)
         pro.save()
         context['status']= (f'Dear {Name} you are Registered Successfully')
+    
     return render(request,'index.html',context)
 
 def aboutus(request):
@@ -76,14 +81,9 @@ def gallery(request):
     return render(request,'gallery.html')
 
 def news(request):
-    
-    all_event_data = Notice.objects.filter(category='Events').values()
-    all_campus_data = Notice.objects.filter(category='Campus News').values()
-    all_notice_data = Notice.objects.filter(category='Notice').values()
+    all_data = Notice.objects.all().values()
     context={
-        'eventlines':all_event_data,
-        'campuslines':all_campus_data,
-        'noticelines':all_notice_data,
+        'all_data':all_data,
     }
     return render(request,'news.html',context)
 
@@ -96,7 +96,7 @@ def demo(request):
         if check_user:
             login(request,check_user)
             context['name']= user_email
-            return render(request,'demo.html',context)
+            return render(request,'login.html',context)
         else:
             context['status']= 'Invalid Credentials'
             return render(request,'index.html',context) 

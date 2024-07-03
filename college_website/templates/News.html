@@ -3,6 +3,10 @@
 {% block cssfile %}
 <link rel="stylesheet" href="/static/base.css">
 <link rel="stylesheet" href="/static/News.css">
+<link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
 {% endblock %}
 {% block content %}
 <main>
@@ -15,10 +19,11 @@
                 <div>
                     <marquee direction="up" scrollamount="3" style="height:400px;">
                         <ul>
-                        {% for data in range(2) %}
-                            <li><i class="ri-pen-nib-fill"></i> jh{{data}}.</li>
-
-                        {% endfor %}
+                            {% for data in all_data %}
+                            {% if data.category == 'Campus-News'%}
+                            <li><i class="ri-quill-pen-fill">{{data.description}}</i></li>
+                            {% endif %}
+                            {% endfor %}
                         </ul>
                     </marquee>
                 </div>
@@ -29,19 +34,11 @@
                 <div>
                     <marquee direction="up" scrollamount="3" style="height:400px;">
                         <ul>
-                            <li><i class="ri-pen-nib-fill"></i> Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry.</li>
-                            <li><i class="ri-pen-nib-fill"></i> Desktop publishing software like Aldus PageMaker
-                                including versions Lorem Ipsum</li>
-                            <li><i class="ri-pen-nib-fill"></i> Many desktop publishing packages and web page editors now
-                                use</li>
-                            <li><i class="ri-pen-nib-fill"></i> Various versions have evolved over the years, sometimes
-                                by accident, sometimes on purpose (injected humour and the like).</li>
-                            <li><i class="ri-pen-nib-fill"></i> Welcome To The Best Private University in MP</li>
-                            <li><i class="ri-pen-nib-fill"></i> Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry.</li>
-                            <li><i class="ri-pen-nib-fill"></i> Desktop publishing software like Aldus PageMaker
-                                including versions of Ipsum</li>
+                            {% for data in all_data %}
+                            {% if data.category == 'Events'%}
+                            <li><i class="ri-quill-pen-fill">{{data.description}}</i></li>
+                            {% endif %}
+                            {% endfor %}
                         </ul>
                     </marquee>
                 </div>
@@ -52,19 +49,11 @@
                 <div>
                     <marquee direction="up" scrollamount="3" style="height:400px;">
                         <ul>
-                            <li><i class="ri-pen-nib-fill"></i> Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry.</li>
-                            <li><i class="ri-pen-nib-fill"></i> Desktop publishing software like Aldus PageMaker
-                                including of Lorem Ipsum</li>
-                            <li><i class="ri-pen-nib-fill"></i> Many desktop publishing packages and web page editors now
-                                use</li>
-                            <li><i class="ri-pen-nib-fill"></i> Various versions have evolved over the years, sometimes
-                                by accident, sometimes on purpose (injected humour and the like).</li>
-                            <li><i class="ri-pen-nib-fill"></i> Welcome To The Best Private University in MP</li>
-                            <li><i class="ri-pen-nib-fill"></i> Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry.</li>
-                            <li><i class="ri-pen-nib-fill"></i> Desktop publishing software like Aldus PageMaker
-                                including versions of Ipsum</li>
+                            {% for data in all_data %}
+                            {% if data.category == 'Notice'%}
+                            <li><i class="ri-quill-pen-fill">{{data.description}}</i></li>
+                            {% endif %}
+                            {% endfor %}
                         </ul>
                     </marquee>
                 </div>
@@ -73,4 +62,3 @@
         <!---------- News, Event, Notice Board HTML Ends --------->
 </main>
 {% endblock %}
-

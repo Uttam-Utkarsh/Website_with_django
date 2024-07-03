@@ -6,14 +6,14 @@
 {% endblock %}
 {% block content %}
 
-{% if mesg  %}
-    <script>
-        alert('{{mesg}}')
-    </script>
+{% if mesg %}
+<script>
+    alert('{{mesg}}')
+</script>
 {% endif %}
 <b><u>
-    <h1>STUDENT REGISTRATION FORM</h1>
-</u> </b>
+        <h1>STUDENT REGISTRATION FORM</h1>
+    </u> </b>
 
 
 <div id="bg">
@@ -26,7 +26,8 @@
                 <tr>
                     <td>FIRST NAME:</td>
                     <td>
-                        <input type="text" name="firstusername" size="30" maxlength="30" placeholder="Enter first name" />
+                        <input type="text" name="firstusername" size="30" maxlength="30"
+                            placeholder="Enter first name" />
                         (max 30 characters A-Z and a-z)
                     </td>
                 </tr>
@@ -89,7 +90,7 @@
                         <label for="male">Male</label>
                         <input id="female" type="radio" name="gender" value="Female">
                         <label for="female">Female</label>
-                        
+
                     </td>
                 </tr>
                 <tr>
@@ -141,7 +142,8 @@
                         <input type="checkbox" name="HOBBIES" value="Sketching" /> Gameing
                         <br />
                         <input type="checkbox" name="HOBBIES" value="Others" /> Others
-                        <input type="text" name="HOBBIES" size="30" maxlength="30" placeholder="Enter any other hobby" />
+                        <input type="text" name="HOBBIES" size="30" maxlength="30"
+                            placeholder="Enter any other hobby" />
                     </td>
                 </tr>
                 <tr>
@@ -208,7 +210,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td >
+                    <td>
                         <button type="submit">Submit</button>
                         <button type="reset">Reset</button>
                     </td>
