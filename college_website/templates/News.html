@@ -15,19 +15,10 @@
                 <div>
                     <marquee direction="up" scrollamount="3" style="height:400px;">
                         <ul>
-                            <li><i class="ri-pen-nib-fill"></i> Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry.</li>
-                            <li><i class="ri-pen-nib-fill"></i> Desktop publishing software like Aldus PageMaker
-                                including versions Lorem Ipsum</li>
-                            <li><i class="ri-pen-nib-fill"></i> Many desktop publishing packages and web page editors now
-                                use</li>
-                            <li><i class="ri-pen-nib-fill"></i> Various versions have evolved over the years, sometimes
-                                by accident, sometimes on purpose (injected humour and the like).</li>
-                            <li><i class="ri-pen-nib-fill"></i> Welcome To The Best Private University in MP</li>
-                            <li><i class="ri-pen-nib-fill"></i> Lorem Ipsum is simply dummy text of the printing and
-                                typesetting industry.</li>
-                            <li><i class="ri-pen-nib-fill"></i> Desktop publishing software like Aldus PageMaker
-                                including versions of Ipsum</li>
+                        {% for data in range(2) %}
+                            <li><i class="ri-pen-nib-fill"></i> jh{{data}}.</li>
+
+                        {% endfor %}
                         </ul>
                     </marquee>
                 </div>

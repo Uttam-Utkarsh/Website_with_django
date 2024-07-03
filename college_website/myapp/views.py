@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from myapp.models import Contact,Profile,Registration_form
+from myapp.models import Contact,Profile,Registration_form,Notice,Programs
 from django.http import HttpResponse , HttpResponseRedirect
 from django.contrib.auth.models import User 
 from django.contrib.auth import authenticate , login, logout 
@@ -76,7 +76,16 @@ def gallery(request):
     return render(request,'gallery.html')
 
 def news(request):
-    return render(request,'news.html')
+    
+    all_event_data = Notice.objects.filter(category='Events').values()
+    all_campus_data = Notice.objects.filter(category='Campus News').values()
+    all_notice_data = Notice.objects.filter(category='Notice').values()
+    context={
+        'eventlines':all_event_data,
+        'campuslines':all_campus_data,
+        'noticelines':all_notice_data,
+    }
+    return render(request,'news.html',context)
 
 def demo(request):
     context={}
