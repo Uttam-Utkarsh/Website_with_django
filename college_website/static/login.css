@@ -19,7 +19,7 @@ height: 100%;
 
 .profile-container {
     width: 80vw;
-    height: 80vh;
+    height: 90vh;
     background-image: url("https://images.unsplash.com/photo-1487147264018-f937fba0c817?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D");
     background-size: cover;
     display: flex;

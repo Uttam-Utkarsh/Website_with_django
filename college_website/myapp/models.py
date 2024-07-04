@@ -18,9 +18,14 @@ class Contact(models.Model):
         
         
 class Profile(models.Model):
-    P_Name = models.CharField(max_length=100)
-    P_Email = models.CharField(max_length=100)
-    P_Password = models.CharField(max_length=100)
+    P_Name = models.CharField(max_length=100,default='none')
+    P_Email = models.CharField(max_length=100,default='none')
+    P_Password = models.CharField(max_length=100,default='none')
+    P_Rollno = models.CharField(max_length=10,default='none')
+    P_Subject = models.CharField(max_length=20,default='none')
+    P_PhoneNo = models.CharField(max_length=20,default='none')
+    P_Blood_group = models.CharField(max_length=10,default='none')
+    P_Image = models.ImageField(upload_to="Profile_image/",default='none')
     def __str__(self):
         return self.P_Name
     

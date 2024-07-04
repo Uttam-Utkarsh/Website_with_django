@@ -87,14 +87,18 @@ def news(request):
     }
     return render(request,'news.html',context)
 
-def login(request):
-    context={}
+def mylogin(request):
+    
+    user_data = Profile.objects.all()
+    context={
+        'user_data': user_data,
+    }
     if request.method == 'POST':
         user_email = request.POST.get('emailaddress')
         user_password = request.POST.get('userpassword')
         check_user = authenticate(username=user_email, password=user_password)
         if check_user:
-            login(request)
+            login(request,check_user)
             context['name']= user_email
             return render(request,'login.html',context)
         else:

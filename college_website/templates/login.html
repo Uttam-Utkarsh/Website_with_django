@@ -11,38 +11,42 @@
     <div class="main">
         <div class="profile-container">
             <div class="container-section1">
-                <div class="img-container">
-                    <img src="https://images.unsplash.com/photo-1719754327382-d86926dc62cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90b3MtZmVlZHw0M3x8fGVufDB8fHx8fA%3D%3D" alt="">
-                </div>
-                <div class="details-container">
-                    <h1>Details:-</h1>
-                    <div class="row">
-                        <h3>Name :</h3>
-                        <h3>{{user.firstname}}</h3>
+                {% for persons in user_data %}
+                {% comment %} {% if {{user.email}}  %} {% endcomment %}
+                        <div class="img-container">
+                            <img src="{{persons.P_Image.url}}" alt="">
+                        </div>
+                    <div class="details-container">
+                        <h1>Details:-</h1>
+                        <div class="row">
+                            <h3>Name :</h3>
+                            <h3>{{persons.P_Name}}</h3>
+                        </div>
+                        <div class="row">
+                            <h3>Roll No :</h3>
+                            <h3>2{{persons.P_Rollno}}</h3>
+                        </div>
+                        <div class="row">
+                            <h3>Subject :</h3>
+                            <h3>{{persons.P_Subject}}</h3>
+                        </div>
+                        <div class="row">
+                            <h3>Email :</h3>
+                            <h3>{{user.email}}</h3>
+                        </div>
+                        <div class="row">
+                            <h3>Phone No :</h3>
+                            <h3>{{persons.P_PhoneNo}}</h3>
+                        </div>
+                        <div class="row">
+                            <h3>Blood Group :</h3>
+                            <h3>{{persons.P_Blood_group}}</h3>
+                        </div>
+                        <button>EDIT PROFILE</button>
+                        <button><a href="{% url 'user_logout'%}">LOGOUT</a></button>
                     </div>
-                    <div class="row">
-                        <h3>Roll No :</h3>
-                        <h3>21BS5853046</h3>
-                    </div>
-                    <div class="row">
-                        <h3>Subject :</h3>
-                        <h3>B.C.A</h3>
-                    </div>
-                    <div class="row">
-                        <h3>Email :</h3>
-                        <h3>{{user.firstname}}</h3>
-                    </div>
-                    <div class="row">
-                        <h3>Phone No :</h3>
-                        <h3>+91-9876543210</h3>
-                    </div>
-                    <div class="row">
-                        <h3>Blood Group :</h3>
-                        <h3>O+</h3>
-                    </div>
-                    <button>EDIT PROFILE</button>
-                    <button><a href="{% url 'user_logout'%}">LOGOUT</a></button>
-                </div>
+                    {% comment %} {% endif %} {% endcomment %}
+               {% endfor %}
             </div>
             <div class="container-section2">
                 <h1 id="section2-title">Welcome in your Profile</h1>
