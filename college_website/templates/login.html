@@ -12,7 +12,7 @@
         <div class="profile-container">
             <div class="container-section1">
                 {% for persons in user_data %}
-                {% comment %} {% if {{user.email}}  %} {% endcomment %}
+                {% if persons.P_Email == name %}
                         <div class="img-container">
                             <img src="{{persons.P_Image.url}}" alt="">
                         </div>
@@ -21,6 +21,7 @@
                         <div class="row">
                             <h3>Name :</h3>
                             <h3>{{persons.P_Name}}</h3>
+                            {% comment %} <h3>'{{name}}'</h3> {% endcomment %}
                         </div>
                         <div class="row">
                             <h3>Roll No :</h3>
@@ -45,7 +46,7 @@
                         <button>EDIT PROFILE</button>
                         <button><a href="{% url 'user_logout'%}">LOGOUT</a></button>
                     </div>
-                    {% comment %} {% endif %} {% endcomment %}
+                    {% endif %}
                {% endfor %}
             </div>
             <div class="container-section2">

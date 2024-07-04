@@ -99,11 +99,11 @@ def mylogin(request):
         check_user = authenticate(username=user_email, password=user_password)
         if check_user:
             login(request,check_user)
-            context['name']= user_email
+            context['name']= (f'{user_email}')
             return render(request,'login.html',context)
         else:
             context['status']= 'Invalid Credentials'
-            return render(request,'index.html',context) 
+            return render(request,'index.html') 
 
 def user_logout(request):
     logout(request)
