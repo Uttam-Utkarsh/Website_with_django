@@ -28,10 +28,11 @@ urlpatterns = [
     path('gallery/',views.gallery, name='gallery'),
     path('news',views.news, name='news'),
     path('admission',views.admission, name='admission'),
+    path('myaccount',views.myaccount, name='myaccount'),
     path('mylogin/',views.mylogin, name='mylogin'),
     path('user_logout/',views.user_logout, name='user_logout'),
     path('faculty/',views.faculty, name='faculty'),
+    path('updateprofile/',views.updateprofile, name='updateprofile'),
+    path('feedbackform/',views.feedbackform, name='feedbackform'),
 ]
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL,
-                          document_root=settings.MEDIA_ROOT)
+if settings.DEBUG: urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

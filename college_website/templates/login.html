@@ -1,53 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="../static/login.css">
 </head>
+
 <body>
     <div class="main">
         <div class="profile-container">
             <div class="container-section1">
                 {% for persons in user_data %}
                 {% if persons.P_Email == name %}
-                        <div class="img-container">
-                            <img src="{{persons.P_Image.url}}" alt="">
-                        </div>
-                    <div class="details-container">
-                        <h1>Details:-</h1>
-                        <div class="row">
-                            <h3>Name :</h3>
-                            <h3>{{persons.P_Name}}</h3>
-                            {% comment %} <h3>'{{name}}'</h3> {% endcomment %}
-                        </div>
-                        <div class="row">
-                            <h3>Roll No :</h3>
-                            <h3>{{persons.P_Rollno}}</h3>
-                        </div>
-                        <div class="row">
-                            <h3>Subject :</h3>
-                            <h3>{{persons.P_Subject}}</h3>
-                        </div>
-                        <div class="row">
-                            <h3>Email :</h3>
-                            <h3>{{user.email}}</h3>
-                        </div>
-                        <div class="row">
-                            <h3>Phone No :</h3>
-                            <h3>{{persons.P_PhoneNo}}</h3>
-                        </div>
-                        <div class="row">
-                            <h3>Blood Group :</h3>
-                            <h3>{{persons.P_Blood_group}}</h3>
-                        </div>
-                        <button>EDIT PROFILE</button>
-                        <button><a href="{% url 'user_logout'%}">LOGOUT</a></button>
+                <div class="img-container">
+                    <img src="{{persons.P_Image.url}}" alt="">
+                </div>
+                <div class="details-container">
+                    <h1>Details:-</h1>
+                    <div class="row">
+                        <h3>Name :</h3>
+                        <h3>{{persons.P_Name}}</h3>
+                        {% comment %} <h3>'{{name}}'</h3> {% endcomment %}
                     </div>
-                    {% endif %}
-               {% endfor %}
+                    <div class="row">
+                        <h3>Roll No :</h3>
+                        <h3>{{persons.P_Rollno}}</h3>
+                    </div>
+                    <div class="row">
+                        <h3>Subject :</h3>
+                        <h3>{{persons.P_Subject}}</h3>
+                    </div>
+                    <div class="row">
+                        <h3>Email :</h3>
+                        <h3>{{user.email}}</h3>
+                    </div>
+                    <div class="row">
+                        <h3>Phone No :</h3>
+                        <h3>{{persons.P_PhoneNo}}</h3>
+                    </div>
+                    <div class="row">
+                        <h3>Blood Group :</h3>
+                        <h3>{{persons.P_Blood_group}}</h3>
+                    </div>
+                    <button><a href="{% url 'updateprofile'%}"> Create Account</a></button>
+                    <button><a href="{% url 'user_logout'%}">LOGOUT</a></button>
+                </div>
+                {% endif %}
+                {% endfor %}
             </div>
             <div class="container-section2">
                 <h1 id="section2-title">Welcome in your Profile</h1>
@@ -55,34 +57,42 @@
                 <div class="row-fordetails">
                     <div class="link-container">
                         <i class="ri-file-list-3-fill"></i>
-                        <a href="#"><h4>Notice</h4></a>
+                        <a href="#">
+                            <h4>Notice</h4>
+                        </a>
                     </div>
                     <div class="link-container">
                         <i class="ri-todo-fill"></i>
-                        <a href="http://exam.ranchiuniversity.co.in/result"><h4>Result</h4></a>
+                        <a href="http://exam.ranchiuniversity.co.in/result">
+                            <h4>Result</h4>
+                        </a>
                     </div>
                 </div>
                 <div class="row-fordetails">
                     <div class="link-container">
                         <i class="ri-verified-badge-fill"></i>
-                        <a href="https://ekalyan.cgg.gov.in/"><h4>Scholarship</h4></a>
+                        <a href="https://ekalyan.cgg.gov.in/">
+                            <h4>Scholarship</h4>
+                        </a>
                     </div>
                     <div class="link-container">
                         <i class="ri-feedback-fill"></i>
-                        <a href="#"><h4>Feedback</h4></a>
+                        <a href="{% url 'feedbackform'%}">
+                            <h4>Feedback</h4>
+                        </a>
                     </div>
                 </div>
-               
+
 
             </div>
         </div>
     </div>
 
+    {% if message2  %}
+    <script>
+        alert('{{message}}')
+    </script>
+    {% endif %}
 </body>
+
 </html>
-
-
-
-
-
-

@@ -1,0 +1,69 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+    html,body{
+    width: 100%;
+    height: 100%;
+    }
+    main{
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(165, 244, 244);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .account-container{
+        width: 50vw;
+        height: 80vh;
+        border-radius: 5%;
+        border: 2px solid black;
+        overflow: hidden;
+        display: flex;
+    }
+    .account-img{
+        width: 50%;
+        height: 100%;
+    }
+    .account-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+    .account-form{
+        width: 50%;
+        height: 100%;
+        color: black;
+        background-color: rgb(149, 213, 213);
+    }
+    h2{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        font-size: 2.8vw;
+    }
+    label{
+        font-size: 1.2vw;
+    }
+    .ourform{
+        padding: 5% 20%;
+    }
+    .form-group{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+    #submitbutton{
+        background-color: green;
+        border: none;
+        width: 8vw;
+        height: 4vh;
+        border-radius: 20px;
+        color: white;
+        margin-left: 3vw;
+        margin-top: 3vh;
+    }

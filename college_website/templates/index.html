@@ -248,25 +248,27 @@
             <div class="row4">
 
                 <!-- Swiper -->
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
+                <div class=".mySwiper">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
 
-                        {% for data in academic_data %}
-                            {% if data.category == 'Master' %}
-                                <div class="swiper-slide ">
-                                    <!-- <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> -->
-                                    <div class="part1">
-                                        <h4>{{data.title}}</h4>
-                                    </div>
-                                    <div class="part2">
-                                        <div class="col1">
-                                            <h6>/{{data.category}}</h6>
+                            {% for data in academic_data %}
+                                {% if data.category == 'Master' %}
+                                    <div class="swiper-slide ">
+                                        <!-- <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> -->
+                                        <div class="part1">
+                                            <h4>{{data.title}}</h4>
                                         </div>
-                                        <div class="col2"><i class="fa-solid fa-arrow-right"></i></div>
+                                        <div class="part2">
+                                            <div class="col1">
+                                                <h6>/{{data.category}}</h6>
+                                            </div>
+                                            <div class="col2"><i class="fa-solid fa-arrow-right"></i></div>
+                                        </div>
                                     </div>
-                                </div>
-                            {% endif %}
-                        {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
                     </div>
                 </div>
 
@@ -486,7 +488,7 @@
                             <div class="item myui">
                                 <div class="myyrow1">
                                     <div class="part-1">
-                                        <img src="{{ 'testdata.pic.url'}}"
+                                        <img src="{{ testdata.pic.url}}"
                                             alt="">
                                     </div>
                                     <div class="part2">

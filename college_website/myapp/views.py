@@ -16,7 +16,10 @@ def index(request):
         'academic_data':academic_data,
         'testmonials_data':testmonials_data,
     }
-    # print(testmonials_data)
+    print(testmonials_data)
+    for i in testmonials_data:
+        print(i.pic.url)
+        print(i.feedback)
     if request.method == 'POST':
         Name = request.POST.get('U_name')
         Email = request.POST.get('U_email')
@@ -90,6 +93,10 @@ def news(request):
     }
     return render(request,'news.html',context)
 
+
+
+def myaccount(request):
+    return render(request,'login.html')
 def mylogin(request):
     
     user_data = Profile.objects.all()
@@ -115,3 +122,43 @@ def user_logout(request):
 
 def faculty(request):
     return render(request,'faculty.html')
+
+
+def updateprofile(request):
+    
+    user_data = Profile.objects.all()
+    print(request.FILES.get('Profile_img'))
+    for currentuser in user_data:
+    #     print(User.email)
+        
+        # if authenticate(User.username== currentuser.P_Name, password = currentuser.P_password):
+        if request.method == 'POST':
+                currentuser.P_Name = request.POST.get('name')
+                currentuser.P_Email = request.POST.get('email')
+                currentuser.P_Subject = request.POST.get('subject')
+                currentuser.P_Rollno = request.POST.get('roll_no')
+                currentuser.P_PhoneNo = request.POST.get('phone_no')
+                currentuser.P_Bloodgroup = request.POST.get('blood_group')
+                # currentuser.P_Image = request.POST.get('Profile_img')
+                currentuser.P_Image = request.FILES.get('Profile_img')
+                MyPassword = request.POST.get('password')
+                # obj = Profile(P_Name = Name, P_Email = Email, P_Password = MyPassword, P_Rollno = RollNo, P_Subject = Subject, P_PhoneNo = PhoneNo, P_BloodGroup = BloodGroup, P_Image = ProfilePic)
+                currentuser.save()
+                message = (f'{currentuser.P_Name} your profile has been updated')
+                return render(request, 'login.html',{'message': message})
+    return render(request,'updateprofile.html')
+
+
+def feedbackform(request):
+    
+    if request.method == 'POST':
+        Name = request.POST.get('name')
+        Email = request.POST.get('email')
+        Subject = request.POST.get('subject')
+        Description = request.POST.get('description')
+        obj = Testimonials(name = Name, F_Email = Email, F_PhoneNo = PhoneNo, F_Subject = Subject, F_Message = Message)
+        obj.save()
+        message = (f'Dear {Name} your feedback has been submitted')
+        return render(request, 'login.html',{'message': message})
+    
+    return render(request,'feedbackform.html')
