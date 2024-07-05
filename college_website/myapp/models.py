@@ -18,16 +18,16 @@ class Contact(models.Model):
         
         
 class Profile(models.Model):
-    P_Name = models.CharField(max_length=100,default='none')
-    P_Email = models.CharField(max_length=100,default='none')
-    P_Password = models.CharField(max_length=100,default='none')
-    P_Rollno = models.CharField(max_length=10,default='none')
-    P_Subject = models.CharField(max_length=20,default='none')
-    P_PhoneNo = models.CharField(max_length=20,default='none')
-    P_Blood_group = models.CharField(max_length=10,default='none')
-    P_Image = models.ImageField(upload_to="Profile_image/",default='none')
+    P_Name = models.CharField(max_length=100,default='')
+    P_Email = models.CharField(max_length=100,default='')
+    P_Password = models.CharField(max_length=100,default='')
+    P_Rollno = models.CharField(max_length=10,default='')
+    P_Subject = models.CharField(max_length=20,default='')
+    P_PhoneNo = models.CharField(max_length=20,default='')
+    P_Blood_group = models.CharField(max_length=10,default='')
+    P_Image = models.ImageField(upload_to="Profile_image/",default='')
     def __str__(self):
-        return self.P_Name
+        return self.P_Name + ' - ' + self.P_Email
     
     class Meta:
         verbose_name =  "Profile Table"
@@ -96,3 +96,22 @@ class Programs(models.Model):
     
     def __str__(self):
         return self.category + " : " + self.title
+    
+    
+    
+# for testmonials
+
+class Testimonials(models.Model):
+    name = models.CharField(max_length=20,default='')
+    feedback = models.TextField(max_length=200)
+    given_star = models.IntegerField(default=1)
+    stars = models.IntegerField(default=0)
+    pic = models.ImageField(upload_to="Profile_image/",default='')
+    
+    def __str__(self):
+        return self.name + ' - ' + self.feedback
+    
+    
+    
+
+    

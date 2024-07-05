@@ -90,7 +90,7 @@
                         </div>
                         <div class="col3">
                             <a href="#"><i class="ri-login-circle-fill profile1"></i></a>
-                            <a href="{%url 'faculty'%}"><i class="ri-admin-fill profile1"></i></a>
+                            <a href="{% url 'admin:index'%}"><i class="ri-admin-fill profile1"></i></a>
                             <i id="menu" class=" fa-solid fa-bars profile1"></i>
 
                         </div>
@@ -252,7 +252,7 @@
                     <div class="swiper-wrapper">
 
                         {% for data in academic_data %}
-                            {% if data.category == 'Phd' %}
+                            {% if data.category == 'Master' %}
                                 <div class="swiper-slide ">
                                     <!-- <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> -->
                                     <div class="part1">
@@ -479,6 +479,38 @@
                 <div class="col2">
                     <div class="part1">
                         <div class="owl-carousel owl-theme mycrou">
+
+
+                            {% for testdata in testmonials_data %}
+                            
+                            <div class="item myui">
+                                <div class="myyrow1">
+                                    <div class="part-1">
+                                        <img src="{{ 'testdata.pic.url'}}"
+                                            alt="">
+                                    </div>
+                                    <div class="part2">
+                                        {% comment %} {% for i in {{given_star}} %} {% endcomment %}
+
+                                            {% comment %} {% if 5 <= {{given_star}} %} {% endcomment %}
+                                                <i class="fa-solid fa-star"></i>
+                                            {% comment %} {% else %} {% endcomment %}
+                                                <i class="fa-regular fa-star"></i>
+                                            {% comment %} {% endif %} {% endcomment %}
+                                        {% comment %} {% endfor %} {% endcomment %}
+                                        <h5>{{testdata.name}}</h5>
+                                        <h6>Student</h6>
+                                    </div>
+
+                                </div>
+                                <div class="row2">
+                                    <p>{{testdata.given_Star}}{{testdata.stars}}</p>
+                                </div>
+                            </div>
+                            
+                            
+                            {% endfor %}
+
                             <div class="item myui">
                                 <div class="myyrow1">
                                     <div class="part-1">
@@ -639,19 +671,14 @@
                 <div class="  part2">
                     <div data-scroll data-scroll-direction="vertical " data-scroll-speed="2" class=" contain-details">
                         <div class="part-1">
-                            <h6>OCT 20,2022</h6>
+                            <h6>OCT 23,2023</h6>
                             <h6 id="but-bac">Bachelor</h6>
                         </div>
                         <div class="part-2">
-                            <h4>The middle east in the <br>twentieth century</h4>
+                            <h4>Health & Wellness</h4>
                         </div>
                         <div class="part-3">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum exercitationem ab, nobis
-                                necessitatibus possimus accusantium ratione aliquam nesciunt magni nemo tempore eveniet
-                                fugiat ad quia repudiandae, adipisci placeat itaque id qui, vitae praesentium. Aut iste
-                                tempora alias consequatur. Aliquid, laudantium. Error aliquam quia voluptate sit,
-                                voluptatum optio qui molestias, tempora quam enim ullam excepturi animi architecto
-                                neque.
+                            <p>Introduce and promote self-care & wellness activities guided by your recreation staff or wellness center counselors. There are many types of events to help students take a moment to breathe, re-center themselves and keep active..
                             </p>
                         </div>
                         <div class="part-4">
@@ -660,19 +687,14 @@
                     </div>
                     <div class="contain-details">
                         <div class="part-1">
-                            <h6>OCT 20,2022</h6>
+                            <h6>DEC 2,2023</h6>
                             <h6 id="but-bac">Bachelor</h6>
                         </div>
                         <div class="part-2">
-                            <h4>The middle east in the <br>twentieth century</h4>
+                            <h4>Sports & Getting Active</h4>
                         </div>
                         <div class="part-3">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum exercitationem ab, nobis
-                                necessitatibus possimus accusantium ratione aliquam nesciunt magni nemo tempore eveniet
-                                fugiat ad quia repudiandae, adipisci placeat itaque id qui, vitae praesentium. Aut iste
-                                tempora alias consequatur. Aliquid, laudantium. Error aliquam quia voluptate sit,
-                                voluptatum optio qui molestias, tempora quam enim ullam excepturi animi architecto
-                                neque.
+                            <p>If you’re in a cold climate, invite students to bundle up and head outdoors for some fun! Sled on a hill on campus or nearby park, rent some snowshoes and hit the trail, ice-skate at a local rink or organize an annual skip trip for a day of shredding, skiing and snowboarding. All of these activities are perfect for seasoned veterans and newbies eager to try something new!
                             </p>
                         </div>
                         <div class="part-4">
@@ -683,19 +705,14 @@
                 <div class="part2">
                     <div class="contain-details">
                         <div class="part-1">
-                            <h6>OCT 20,2022</h6>
+                            <h6>JAN 15,2024</h6>
                             <h6 id="but-bac">Bachelor</h6>
                         </div>
                         <div class="part-2">
-                            <h4>The middle east in the <br>twentieth century</h4>
+                            <h4>Creative & DIY Fun</h4>
                         </div>
                         <div class="part-3">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum exercitationem ab, nobis
-                                necessitatibus possimus accusantium ratione aliquam nesciunt magni nemo tempore eveniet
-                                fugiat ad quia repudiandae, adipisci placeat itaque id qui, vitae praesentium. Aut iste
-                                tempora alias consequatur. Aliquid, laudantium. Error aliquam quia voluptate sit,
-                                voluptatum optio qui molestias, tempora quam enim ullam excepturi animi architecto
-                                neque.</p>
+                            <p>Good Crafternoon! Whether learning a new skill or encouraging creative expression, students will LOVE meeting up for unique pop-up projects and creating something fun together. Bonus: art therapy is a great way to help college students to manage stress and heavy workloads.</p>
                         </div>
                         <div class="part-4">
                             <i class="fa-solid fa-arrow-right"></i>
@@ -703,19 +720,14 @@
                     </div>
                     <div data-scroll data-scroll-direction="vertical " data-scroll-speed="2" class="contain-details">
                         <div class="part-1">
-                            <h6>OCT 20,2022</h6>
+                            <h6>MAR 06,2024</h6>
                             <h6 id="but-bac">Bachelor</h6>
                         </div>
                         <div class="part-2">
-                            <h4>The middle east in the <br>twentieth century</h4>
+                            <h4>Outdoor Adventures & Nature</h4>
                         </div>
                         <div class="part-3">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum exercitationem ab, nobis
-                                necessitatibus possimus accusantium ratione aliquam nesciunt magni nemo tempore eveniet
-                                fugiat ad quia repudiandae, adipisci placeat itaque id qui, vitae praesentium. Aut iste
-                                tempora alias consequatur. Aliquid, laudantium. Error aliquam quia voluptate sit,
-                                voluptatum optio qui molestias, tempora quam enim ullam excepturi animi architecto
-                                neque.
+                            <p>Take a break from indoor spaces and opt outside! Weather permitting, spending time in nature decreases stress, anxiety and the seasonal depression that can plague some students in the long, dark winter months.Offer students the chance to get off campus by hosting a group hiking trip through a winter wonderland! Be mindful of the weather and any potentially dangerous icy conditions, though!
                             </p>
                         </div>
                         <div class="part-4">

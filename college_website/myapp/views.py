@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from myapp.models import Contact,Profile,Registration_form,Notice,Programs
+from myapp.models import Contact,Profile,Registration_form,Notice,Programs,Testimonials
 from django.http import HttpResponse , HttpResponseRedirect
 from django.contrib.auth.models import User 
 from django.contrib.auth import authenticate , login, logout 
@@ -11,9 +11,12 @@ import time
 def index(request):
     
     academic_data = Programs.objects.all()
+    testmonials_data = Testimonials.objects.all()
     context={
         'academic_data':academic_data,
+        'testmonials_data':testmonials_data,
     }
+    # print(testmonials_data)
     if request.method == 'POST':
         Name = request.POST.get('U_name')
         Email = request.POST.get('U_email')
