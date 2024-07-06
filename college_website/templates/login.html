@@ -14,42 +14,47 @@
         <div class="profile-container">
             <div class="container-section1">
                 {% for persons in user_data %}
-                {% if persons.P_Email == name %}
-                <div class="img-container">
-                    <img src="{{persons.P_Image.url}}" alt="">
-                </div>
-                <div class="details-container">
-                    <h1>Details:-</h1>
-                    <div class="row">
-                        <h3>Name :</h3>
-                        <h3>{{persons.P_Name}}</h3>
-                        {% comment %} <h3>'{{name}}'</h3> {% endcomment %}
-                    </div>
-                    <div class="row">
-                        <h3>Roll No :</h3>
-                        <h3>{{persons.P_Rollno}}</h3>
-                    </div>
-                    <div class="row">
-                        <h3>Subject :</h3>
-                        <h3>{{persons.P_Subject}}</h3>
-                    </div>
-                    <div class="row">
-                        <h3>Email :</h3>
-                        <h3>{{user.email}}</h3>
-                    </div>
-                    <div class="row">
-                        <h3>Phone No :</h3>
-                        <h3>{{persons.P_PhoneNo}}</h3>
-                    </div>
-                    <div class="row">
-                        <h3>Blood Group :</h3>
-                        <h3>{{persons.P_Blood_group}}</h3>
-                    </div>
+                    {% if persons.P_Email == name %}
+                        <div class="img-container">
+                            {% if persons.P_Image %}
+                                <img src="{{persons.P_Image.url}}" alt="">
+                            {% else%}
+                                <img src="https://images.unsplash.com/photo-1534294668821-28a3054f4256?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                            {%endif%}
+                        </div>
+                        <div class="details-container">
+                            <h1>Details:-</h1>
+                            <div class="row">
+                                <h3>Name :</h3>
+                                <h3>{{persons.P_Name}}</h3>
+                            </div>
+                            <div class="row">
+                                <h3>Roll No :</h3>
+                                <h3>{{persons.P_Rollno}}</h3>
+                            </div>
+                            <div class="row">
+                                <h3>Subject :</h3>
+                                <h3>{{persons.P_Subject}}</h3>
+                            </div>
+                            <div class="row">
+                                <h3>Email :</h3>
+                                <h3>{{user.email}}</h3>
+                            </div>
+                            <div class="row">
+                                <h3>Phone No :</h3>
+                                <h3>{{persons.P_PhoneNo}}</h3>
+                            </div>
+                            <div class="row">
+                                <h3>Blood Group :</h3>
+                                <h3>{{persons.P_Blood_group}}</h3>
+                            </div>
+                        
+                    {% endif %}
+                {% endfor %}
                     <button><a href="{% url 'updateprofile'%}"> Create Account</a></button>
                     <button><a href="{% url 'user_logout'%}">LOGOUT</a></button>
                 </div>
-                {% endif %}
-                {% endfor %}
+                
             </div>
             <div class="container-section2">
                 <h1 id="section2-title">Welcome in your Profile</h1>

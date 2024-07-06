@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate , login, logout 
 import datetime
 import time
+from django.contrib.auth import get_user # Here
 
 # Create your views here.
 
@@ -15,11 +16,7 @@ def index(request):
     context={
         'academic_data':academic_data,
         'testmonials_data':testmonials_data,
-    }
-    print(testmonials_data)
-    for i in testmonials_data:
-        print(i.pic.url)
-        print(i.feedback)
+    }    
     if request.method == 'POST':
         Name = request.POST.get('U_name')
         Email = request.POST.get('U_email')
@@ -106,7 +103,7 @@ def mylogin(request):
     if request.method == 'POST':
         user_email = request.POST.get('emailaddress')
         user_password = request.POST.get('userpassword')
-        check_user = authenticate(username=user_email, password=user_password)
+        check_user = authenticate(username = user_email, password = user_password)
         if check_user:
             login(request,check_user)
             context['name']= (f'{user_email}')
@@ -114,6 +111,8 @@ def mylogin(request):
         else:
             context['status']= 'Invalid Credentials'
             return render(request,'index.html') 
+        
+    return render(request,'login.html',context)
 
 def user_logout(request):
     logout(request)
@@ -127,25 +126,23 @@ def faculty(request):
 def updateprofile(request):
     
     user_data = Profile.objects.all()
-    print(request.FILES.get('Profile_img'))
+
     for currentuser in user_data:
-    #     print(User.email)
-        
-        # if authenticate(User.username== currentuser.P_Name, password = currentuser.P_password):
+        print(currentuser.P_Email)
         if request.method == 'POST':
-                currentuser.P_Name = request.POST.get('name')
-                currentuser.P_Email = request.POST.get('email')
-                currentuser.P_Subject = request.POST.get('subject')
-                currentuser.P_Rollno = request.POST.get('roll_no')
-                currentuser.P_PhoneNo = request.POST.get('phone_no')
-                currentuser.P_Bloodgroup = request.POST.get('blood_group')
-                # currentuser.P_Image = request.POST.get('Profile_img')
-                currentuser.P_Image = request.FILES.get('Profile_img')
-                MyPassword = request.POST.get('password')
-                # obj = Profile(P_Name = Name, P_Email = Email, P_Password = MyPassword, P_Rollno = RollNo, P_Subject = Subject, P_PhoneNo = PhoneNo, P_BloodGroup = BloodGroup, P_Image = ProfilePic)
-                currentuser.save()
-                message = (f'{currentuser.P_Name} your profile has been updated')
-                return render(request, 'login.html',{'message': message})
+            if currentuser.P_Email == request.POST.get('email'):
+                    currentuser.P_Name = request.POST.get('name')
+                    currentuser.P_Email = request.POST.get('email')
+                    currentuser.P_Subject = request.POST.get('subject')
+                    currentuser.P_Rollno = request.POST.get('roll_no')
+                    currentuser.P_PhoneNo = request.POST.get('phone_no')
+                    currentuser.P_Blood_group = request.POST.get('blood_group')
+                    currentuser.P_Image = request.FILES.get('profile_img')
+                    MyPassword = request.POST.get('password')
+                    # obj = Profile(P_Name = Name, P_Email = Email, P_Password = MyPassword, P_Rollno = RollNo, P_Subject = Subject, P_PhoneNo = PhoneNo, P_BloodGroup = BloodGroup, P_Image = ProfilePic)
+                    currentuser.save()
+                    message = (f'{currentuser.P_Name} your profile has been updated')
+                    return render(request, 'login.html',{'message': message})
     return render(request,'updateprofile.html')
 
 
@@ -153,12 +150,14 @@ def feedbackform(request):
     
     if request.method == 'POST':
         Name = request.POST.get('name')
-        Email = request.POST.get('email')
-        Subject = request.POST.get('subject')
         Description = request.POST.get('description')
-        obj = Testimonials(name = Name, F_Email = Email, F_PhoneNo = PhoneNo, F_Subject = Subject, F_Message = Message)
-        obj.save()
+        Pic = request.FILES.get("Pic")
+        Star = request.POST.get('Star')
+        noneStar = 5 - int(Star)
+        myobj = Testimonials(name = Name, feedback = Description, given_star = Star, pic = Pic, stars = noneStar )
+        myobj.save()
         message = (f'Dear {Name} your feedback has been submitted')
-        return render(request, 'login.html',{'message': message})
+        # return render(request, 'login.html',{'message': message})
+        # return HttpResponseRedirect('login/')
     
     return render(request,'feedbackform.html')
