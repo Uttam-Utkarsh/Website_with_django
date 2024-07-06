@@ -143,6 +143,7 @@ def updateprofile(request):
                     currentuser.save()
                     message = (f'{currentuser.P_Name} your profile has been updated')
                     return render(request, 'login.html',{'message': message})
+                    # return HttpResponseRedirect('./')
     return render(request,'updateprofile.html')
 
 
