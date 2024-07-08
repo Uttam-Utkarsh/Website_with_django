@@ -587,6 +587,7 @@
         padding: 20px 20px;
         text-transform: capitalize;
         display: flex;
+        color: #494848;
 
 
     }
@@ -613,8 +614,7 @@
     }
 
     .swiper-slide:hover {
-        background-color: #080808;
-        color: white;
+        color: rgb(18, 2, 2);
 
     }
 

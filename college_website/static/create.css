@@ -64,6 +64,16 @@
         height: 4vh;
         border-radius: 20px;
         color: white;
-        margin-left: 3vw;
-        margin-top: 3vh;
+        /* margin-left: 2vw; */
+        /* margin-top: 3vh; */
+    }
+    .mybuttons{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 15px;
+        gap: 10px;
+    }
+    a{
+        text-decoration: none;
+        color: white;
     }
