@@ -429,7 +429,7 @@ front_page();
 front_page_Animation();
 secondpage();
 thirdpage();
-thirdpage_Selection();
+// thirdpage_Selection();
 fifthpage();
 sixthpage();
 seventhpage();

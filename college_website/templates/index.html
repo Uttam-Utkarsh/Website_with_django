@@ -241,19 +241,69 @@
                     intuitive learning among students.</h6>
             </div>
             <div class="row3">
-                <h6 class="options active">/bachelor</h6>
-                <h6 class="options">/masters</h6>
-                <h6 class="options">/phd</h6>
+                <h6 class="options active" id="bachelor">/bachelor</h6>
+                <h6 class="options" id="master">/masters</h6>
+                <h6 class="options" id="phd">/phd</h6>
             </div>
             <div class="row4">
 
                 <!-- Swiper -->
-                <div class=".mySwiper">
+                <div class=".mySwiper" id="swiperBachelor">
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
 
                             {% for data in academic_data %}
                                 {% if data.category == 'Bachelor' %}
+                                    <div class="swiper-slide ">
+                                        <!-- <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> -->
+                                        <div class="part1">
+                                            <h4>{{data.title}}</h4>
+                                        </div>
+                                        <div class="part2">
+                                            <div class="col1">
+                                                <h6>/{{data.category}}</h6>
+                                            </div>
+                                            <div class="col2"><i class="fa-solid fa-arrow-right"></i></div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class=".mySwiper" id="swiperMaster">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+
+                            {% for data in academic_data %}
+                                {% if data.category == 'Master' %}
+                                    <div class="swiper-slide ">
+                                        <!-- <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> -->
+                                        <div class="part1">
+                                            <h4>{{data.title}}</h4>
+                                        </div>
+                                        <div class="part2">
+                                            <div class="col1">
+                                                <h6>/{{data.category}}</h6>
+                                            </div>
+                                            <div class="col2"><i class="fa-solid fa-arrow-right"></i></div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class=".mySwiper" id="swiperPhd">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+
+                            {% for data in academic_data %}
+                                {% if data.category == 'Phd' %}
                                     <div class="swiper-slide ">
                                         <!-- <img src="https://swiperjs.com/demos/images/nature-1.jpg" /> -->
                                         <div class="part1">
@@ -978,6 +1028,52 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
         integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <script>
+
+        $(document).ready(function(){
+                $("#swiperMaster").hide();
+                $("#swiperPhd").hide();
+
+            $("#bachelor").click(function(){
+
+                $("#swiperMaster").hide();
+                $("#swiperPhd").hide();
+                $("#swiperBachelor").show();
+                $("#bachelor").css("color", "black");
+                $("#master").css("color", "#494848");
+                $("#phd").css("color", "#494848");  
+            })
+            
+            
+            $("#master").click(function(){
+                
+                $("#swiperBachelor").hide();
+                $("#swiperPhd").hide();
+                $("#swiperMaster").show();
+                $("#master").css("color", "black");
+                $("#bachelor").css("color", "#494848");
+                $("#phd").css("color", "#494848");
+
+            })
+
+            $("#phd").click(function(){
+                
+                $("#swiperPhd").show();
+                $("#swiperBachelor").hide();
+                $("#swiperMaster").hide();
+                $("#phd").css("color", "black");
+                $("#master").css("color", "#494848");
+                $("#bachelor").css("color", "#494848");
+
+
+            })
+
+        });
+
+    </script>    
 
     <script src="/static/script.js"></script>
 </body>
