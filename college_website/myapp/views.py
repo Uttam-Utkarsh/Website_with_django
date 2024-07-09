@@ -126,9 +126,12 @@ def faculty(request):
 def updateprofile(request):
     
     user_data = Profile.objects.all()
+    
+    context ={
+        'user_data' : user_data,
+    }
 
     for currentuser in user_data:
-        print(currentuser.P_Email)
         if request.method == 'POST':
             if currentuser.P_Email == request.POST.get('email'):
                     currentuser.P_Name = request.POST.get('name')
@@ -141,8 +144,10 @@ def updateprofile(request):
                     MyPassword = request.POST.get('password')
                     # obj = Profile(P_Name = Name, P_Email = Email, P_Password = MyPassword, P_Rollno = RollNo, P_Subject = Subject, P_PhoneNo = PhoneNo, P_BloodGroup = BloodGroup, P_Image = ProfilePic)
                     currentuser.save()
-                    message = (f'{currentuser.P_Name} your profile has been updated')
-                    return render(request, 'login.html',{'message': message})
+                    context['message'] = (f'{currentuser.P_Name} your profile has been updated')
+                    context['newdata'] = Profile.objects.all()
+                    newdata= Profile.objects.all()
+                    return render(request, 'updateprofile.html',context)
                     # return HttpResponseRedirect('./')
     return render(request,'updateprofile.html')
 
