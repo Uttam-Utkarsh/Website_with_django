@@ -26,18 +26,22 @@ main {
     position: relative;
 }
 
-.title2{
+.title2 h1{
+    /* display: flex;
+    justify-content: center; */
     width: 25vw;
     height: 3vw;
     position:absolute;
     /* background-color: beige; */
     color: aliceblue;
     top: 5vh;
+    left: 42vw;
 }
 
 .title h1{
     display: flex;
     justify-content: center;
+
 }
 
 .col11 {

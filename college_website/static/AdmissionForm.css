@@ -12,13 +12,14 @@ body{
 }
 
 h1 {
-    color: rgb(0, 4, 6);
+    color: rgb(3, 8, 0);
     text-align: center;
     padding: 0px;
     font-size: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10vh;
 }
 
 #form {
@@ -126,4 +127,25 @@ input#email {
 
 input#twitter {
     background-image: url("");
+}
+
+#contain_buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+button{
+   
+    width: 5vw;
+    height: 5vh;
+    color: white;
+    border-radius: 20px;
+    border: none;
+}
+#id_submit{
+    background-color: green;
+}
+#id_reset{
+    background-color: red;
 }
