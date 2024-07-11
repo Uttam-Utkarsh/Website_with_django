@@ -10,6 +10,12 @@
 </head>
 
 <body>
+    {%if login_message%}
+    <script>
+        alert("{{login_message}}")
+    </script>
+{%endif%}
+
     <div class="main">
         <div class="profile-container">
             <div class="container-section1">

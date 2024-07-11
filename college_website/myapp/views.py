@@ -64,9 +64,7 @@ def admission(request):
         Course = request.POST.get('COURSES')
         obj = Registration_form(student_first_name = FName, student_last_name = LName, student_date_of_birth = DOB, student_email = Email, student_phonenumber = PNo, student_gender = Gender, student_address = Address, student_city = City, student_pincode = Pin, student_state = State, student_country = Country, student_hobbies = Hobbies, student_course = Course, student_class10_board = cl_x_board, student_class10_perc = cl_x_Per, student_class10_year_of_pass = cl_x_year, student_class12_board = cl_12_board, student_class12_perc = cl_12_Per, student_class12_year_of_pass = cl_12_year, student_graduation_board = cl_g_board, student_graduation_perc = cl_g_Per, student_graduation_year_of_pass = cl_g_year, student_masters_board = cl_m_board, student_masters_perc = cl_m_Per, student_masters_year_of_pass = cl_m_year )
         obj.save()
-        context['mesg']= (f'Dear {FName} Registered Succesfull')
-        # time.sleep(2)
-        # return HttpResponseRedirect('/')
+        context['mesg']= (f'Dear {FName} your form will be submited Succesfully')
     return render(request,'admissionForm.html',context)
 
 def contactus (request):
@@ -102,15 +100,22 @@ def mylogin(request):
     }
     if request.method == 'POST':
         user_email = request.POST.get('emailaddress')
+        
+        def test(email_address):
+            r = email_address.index("@")
+            return "".join(l for l in email_address[:r] if l.isalpha())
+        user_name = test(user_email)
+
         user_password = request.POST.get('userpassword')
         check_user = authenticate(username = user_email, password = user_password)
         if check_user:
             login(request,check_user)
             context['name']= (f'{user_email}')
+            context['login_message'] = (f'Dear {user_name} login succesfully ')
             return render(request,'login.html',context)
         else:
-            context['status']= 'Invalid Credentials'
-            return render(request,'index.html') 
+            context['status']= 'Invalid Credentials Please Try Again'
+            return render(request,'index.html',context) 
         
     return render(request,'login.html',context)
 
@@ -146,8 +151,9 @@ def updateprofile(request):
                     currentuser.save()
                     context['message'] = (f'Dear {currentuser.P_Name} your profile has been updated')
                     context['newdata'] = Profile.objects.all()
+                    context['name'] = currentuser.P_Email
                     newdata= Profile.objects.all()
-                    return render(request, 'updateprofile.html',context)
+                    return render(request, 'login.html',context)
                     # return HttpResponseRedirect('./')
     return render(request,'updateprofile.html')
 
