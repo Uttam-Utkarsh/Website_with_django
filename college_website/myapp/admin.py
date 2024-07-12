@@ -1,5 +1,5 @@
 from django.contrib import admin 
-from myapp.models import Contact,Profile,Registration_form,Notice,Programs,Testimonials
+from myapp.models import Contact,Profile,Registration_form,Notice,Programs,Testimonials,StudentResult,StudentNotification
 
 # Register your models here.
 
@@ -18,4 +18,6 @@ admin.site.register(Registration_form)
 admin.site.register(Notice)
 admin.site.register(Programs)
 admin.site.register(Testimonials)
+admin.site.register(StudentNotification)
+admin.site.register(StudentResult)
 

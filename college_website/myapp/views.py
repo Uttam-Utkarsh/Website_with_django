@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from myapp.models import Contact,Profile,Registration_form,Notice,Programs,Testimonials
+from myapp.models import Contact,Profile,Registration_form,Notice,Programs,Testimonials,StudentNotification,StudentResult
 from django.http import HttpResponse , HttpResponseRedirect
 from django.contrib.auth.models import User 
 from django.contrib.auth import authenticate , login, logout 
@@ -94,6 +94,9 @@ def myaccount(request):
     return render(request,'login.html')
 def mylogin(request):
     
+    if 'user_email' in request.session:
+            user_email = request.session.get('user_email')
+    
     user_data = Profile.objects.all()
     context={
         'user_data': user_data,
@@ -110,6 +113,7 @@ def mylogin(request):
         check_user = authenticate(username = user_email, password = user_password)
         if check_user:
             login(request,check_user)
+            request.session['user_email'] = user_email
             context['name']= (f'{user_email}')
             context['login_message'] = (f'Dear {user_name} login succesfully ')
             return render(request,'login.html',context)
@@ -117,7 +121,7 @@ def mylogin(request):
             context['status']= 'Invalid Credentials Please Try Again'
             return render(request,'index.html',context) 
         
-    return render(request,'login.html',context)
+    return render(request,'login.html',{'name' : user_email})
 
 def user_logout(request):
     logout(request)
@@ -160,6 +164,10 @@ def updateprofile(request):
 
 def feedbackform(request):
     
+    if 'user_email' in request.session:
+            user_email = request.session.get('user_email')
+  
+    
     if request.method == 'POST':
         Name = request.POST.get('name')
         Description = request.POST.get('description')
@@ -169,7 +177,36 @@ def feedbackform(request):
         myobj = Testimonials(name = Name, feedback = Description, given_star = Star, pic = Pic, stars = noneStar )
         myobj.save()
         message = (f'Dear {Name} your feedback has been submitted sucessfully')
-        return render(request, 'feedbackform.html',{'message': message})
+       
+        return render(request, 'feedbackform.html',{'message' : message})
         # return HttpResponseRedirect('login/')
     
     return render(request,'feedbackform.html')
+
+
+def showResult(request):
+    if 'user_email' in request.session:
+            user_email = request.session.get('user_email')
+            
+    Result_data = StudentResult.objects.all()
+    
+            
+    return render(request,'forresult.html',{'user_email' : user_email, 'resultdata' : Result_data})
+
+
+def showNotice(request):
+    context ={
+        
+    }
+    if 'user_email' in request.session:
+            user_email = request.session.get('user_email')
+            
+    Notice_Data = StudentNotification.objects.all()
+    
+    if request.method == 'POST':
+        print(user_email)
+        context['name'] = user_email
+        return render(request,'login.html',context)
+    
+        
+    return render(request,'fornotice.html',{'user_email' : user_email, 'noticedata' : Notice_Data})

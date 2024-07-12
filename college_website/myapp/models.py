@@ -113,5 +113,34 @@ class Testimonials(models.Model):
     
     
     
+    
+class StudentNotification(models.Model):
+    Student_Email = models.CharField(max_length=50)
+    Description = models.TextField(max_length=200)
+    
+    def __str__(self):
+        return self.Student_Email + ' - ' + self.Description
+    
+    
+    
+class StudentResult(models.Model):
+    Student_Email = models.CharField(max_length=50)
+    Title_of_image1 = models.CharField(max_length=50,blank=True)
+    Result_Image1 = models.ImageField(upload_to="profile_image/",blank=True)
+    Title_of_image2 = models.CharField(max_length=50,blank=True)
+    Result_Image2 = models.ImageField(upload_to="profile_image/",blank=True)
+    Title_of_image3 = models.CharField(max_length=50,blank=True)
+    Result_Image3 = models.ImageField(upload_to="profile_image/",blank=True)
+    Title_of_image4 = models.CharField(max_length=50,blank=True)
+    Result_Image4 = models.ImageField(upload_to="profile_image/",blank=True)
+    Title_of_image5 = models.CharField(max_length=50,blank=True)
+    Result_Image5 = models.ImageField(upload_to="profile_image/",blank=True)
+    Title_of_image6 = models.CharField(max_length=50,blank=True)
+    Result_Image6 = models.ImageField(upload_to="profile_image/",blank=True)
+    
+    def __str__(self):
+        return self.Student_Email + ' Results'
+    
+    
 
     

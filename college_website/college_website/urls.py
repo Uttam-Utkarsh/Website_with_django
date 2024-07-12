@@ -34,5 +34,7 @@ urlpatterns = [
     path('faculty/',views.faculty, name='faculty'),
     path('updateprofile/',views.updateprofile, name='updateprofile'),
     path('feedbackform/',views.feedbackform, name='feedbackform'),
+    path('showResult/',views.showResult, name='ShowResult'),
+    path('showNotice/',views.showNotice, name='ShowNotice'),
 ]
 if settings.DEBUG: urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

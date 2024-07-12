@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="../static/forresult.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <main>
+        <form action="#" method="post" id="id_form">
+            {% csrf_token %}
+            <button type="submit"><a href="{% url 'user_logout'%}"><i class="ri-arrow-go-back-fill"></i>Back</a></button>
+            <!-- <button type="submit"><i class="ri-arrow-go-back-fill"></i>Back</button> -->
+        </form>
+        <div class="title">
+            <h1>All RESULTS</h1>
+        </div>
+        <div class="containsResult">
+            {%for data in resultdata%}
+                {%if data.Student_Email == user_email%}
+
+                <div class="imgandtext">
+                    <div class="containimg">
+                        <img src="{{data.Result_Image1.url}}" alt="">
+                    </div>
+                    <div class="containtext">
+                        <p>{{data.Title_of_image1}}</p>
+                    </div>
+                </div>
+
+
+                <div class="imgandtext">
+                    <div class="containimg">
+                        {%if data.Result_Image2%}
+                            <img src="{{data.Result_Image2.url}}" alt="">
+                        {%else%}
+                            <img src="https://cdn.vectorstock.com/i/1000v/37/07/not-available-sign-or-stamp-vector-22523707.avif" alt="">
+                        {%endif%}
+                    </div>
+                    <div class="containtext">
+                        <p>{{data.Title_of_image2}}</p>
+                    </div>
+                </div>
+                <div class="imgandtext">
+                    <div class="containimg">
+                        {%if data.Result_Image3%}
+                            <img src="{{data.Result_Image3.url}}" alt="">
+                        {%else%}
+                            <img src="https://cdn.vectorstock.com/i/1000v/37/07/not-available-sign-or-stamp-vector-22523707.avif" alt="">
+                        {%endif%}
+                    </div>
+                    <div class="containtext">
+                        <p>{{data.Title_of_image3}}</p>
+                    </div>
+                </div>
+                <div class="imgandtext">
+                    <div class="containimg">
+                        {%if data.Result_Image4%}
+                            <img src="{{data.Result_Image4.url}}" alt="">
+                        {%else%}
+                            <img src="https://cdn.vectorstock.com/i/1000v/37/07/not-available-sign-or-stamp-vector-22523707.avif" alt="">
+                        {%endif%}
+                    </div>
+                    <div class="containtext">
+                        <p>{{data.Title_of_image4}}</p>
+                    </div>
+                </div>
+                <div class="imgandtext">
+                    <div class="containimg">
+                        {%if data.Result_Image5%}
+                            <img src="{{data.Result_Image5.url}}" alt="">
+                        {%else%}
+                            <img src="https://cdn.vectorstock.com/i/1000v/37/07/not-available-sign-or-stamp-vector-22523707.avif" alt="">
+                        {%endif%}
+                    </div>
+                    <div class="containtext">
+                        <p>{{data.Title_of_image5}}</p>
+                    </div>
+                </div>
+                <div class="imgandtext">
+                    <div class="containimg">
+                    {%if data.Result_Image6%}
+                        <img src="{{data.Result_Image6.url}}" alt="">
+                    {%else%}
+                        <img src="https://cdn.vectorstock.com/i/1000v/37/07/not-available-sign-or-stamp-vector-22523707.avif" alt="">
+                    {%endif%}
+                    </div>
+                    <div class="containtext">
+                        <p>{{data.Title_of_image6}}</p>
+                    </div>
+                </div>
+
+
+                {%endif%}
+
+            {%endfor%}
+                               
+        </div>
+        <button><a href="{% url 'user_logout'%}"></a></button>
+    </main>
+</body>
+</html>
