@@ -3,7 +3,7 @@ from myapp.models import Contact,Profile,Registration_form,Notice,Programs,Testi
 
 # Register your models here.
 
-admin.site.site_header = ' Indian College Admin'
+admin.site.site_header = 'College Admin Panel'
 
 class ContactAdmin(admin.ModelAdmin):
     list_display = ['id','Name','Email','Description', 'added_on', 'is_active']

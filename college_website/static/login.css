@@ -72,16 +72,17 @@ height: 100%;
 
 button {
     margin-top: 10px;
-    /* border: 1px solid green; */
+    border: none;
     border-radius: 20px;
     width: 12vw;
-    height: 5.2vh;
+    height: 5.5vh;
     font-size: 1.1vw;
     cursor: pointer;
+    color: white;
 }
 a{
     text-decoration: none;
-    color: black;
+    color: rgb(248, 246, 246);
 }
 
 #id_submit{
