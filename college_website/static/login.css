@@ -72,16 +72,25 @@ height: 100%;
 
 button {
     margin-top: 10px;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     border-radius: 20px;
     width: 12vw;
-    height: 4vh;
+    height: 5.2vh;
     font-size: 1.1vw;
     cursor: pointer;
 }
 a{
     text-decoration: none;
     color: black;
+}
+
+#id_submit{
+    background-color: green;
+    color: white;
+}
+#id_logout{
+    background-color: red;
+    color: white;
 }
 
 #section2-title {

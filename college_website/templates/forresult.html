@@ -15,8 +15,8 @@
     <main>
         <form action="#" method="post" id="id_form">
             {% csrf_token %}
-            <button type="submit"><a href="{% url 'user_logout'%}"><i class="ri-arrow-go-back-fill"></i>Back</a></button>
-            <!-- <button type="submit"><i class="ri-arrow-go-back-fill"></i>Back</button> -->
+            {% comment %} <button type="submit"><a href="{% url 'user_logout'%}"><i class="ri-arrow-go-back-fill"></i>Back</a></button> {% endcomment %}
+            <button type="submit"><i class="ri-arrow-go-back-fill"></i>Back</button> 
         </form>
         <div class="title">
             <h1>All RESULTS</h1>
@@ -27,7 +27,11 @@
 
                 <div class="imgandtext">
                     <div class="containimg">
+                        {%if data.Result_Image1%}
                         <img src="{{data.Result_Image1.url}}" alt="">
+                    {%else%}
+                        <img src="https://cdn.vectorstock.com/i/1000v/37/07/not-available-sign-or-stamp-vector-22523707.avif" alt="">
+                    {%endif%}
                     </div>
                     <div class="containtext">
                         <p>{{data.Title_of_image1}}</p>

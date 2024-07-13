@@ -15,8 +15,8 @@
 <body>
         <form action="#" method="post" id="id_form">
             {% csrf_token %}
-            <button type="submit"><a href="{% url 'user_logout'%}"><i class="ri-arrow-go-back-fill"></i>Back</a></button>
-            <!-- <button type="submit"><i class="ri-arrow-go-back-fill"></i>Back</button> -->
+            {% comment %} <button type="submit"><a href="{% url 'user_logout'%}"><i class="ri-arrow-go-back-fill"></i>Back</a></button> {% endcomment %}
+             <button type="submit"><i class="ri-arrow-go-back-fill"></i>Back</button> 
         </form>
         <div class="content">
             <ul>

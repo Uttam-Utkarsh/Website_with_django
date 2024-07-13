@@ -185,18 +185,31 @@ def feedbackform(request):
 
 
 def showResult(request):
+    
+    user_data = Profile.objects.all()
+    
+    context ={
+        'user_data' : user_data,
+    }
+    
     if 'user_email' in request.session:
             user_email = request.session.get('user_email')
             
     Result_data = StudentResult.objects.all()
+    
+    if request.method == 'POST':
+        context['name'] = user_email
+        return render(request,'login.html',context)
     
             
     return render(request,'forresult.html',{'user_email' : user_email, 'resultdata' : Result_data})
 
 
 def showNotice(request):
+    user_data = Profile.objects.all()
+    
     context ={
-        
+        'user_data' : user_data,
     }
     if 'user_email' in request.session:
             user_email = request.session.get('user_email')
@@ -204,7 +217,6 @@ def showNotice(request):
     Notice_Data = StudentNotification.objects.all()
     
     if request.method == 'POST':
-        print(user_email)
         context['name'] = user_email
         return render(request,'login.html',context)
     
